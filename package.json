@@ -1,0 +1,25 @@
+{
+  "name": "hostme-sdk-angular-mobile",
+  "version": "1.1.0",
+  "description": "HostMe angular SDK for mobile APIs",
+  "main": "index.d.ts",
+  "versionedSources": "bower.json,typings.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HostMeApp/hostme-sdk-angular-mobile.git"
+  },
+  "scripts": {
+    "postinstall": "typings install",
+    "test": "tsc"
+  },
+  "author": "HostMe",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "jquery": "^2.2.3"
+  },
+  "devDependencies": {
+    "typings": "^0.7.12",
+    "typescript": "^1.5.3"
+  }
+}
