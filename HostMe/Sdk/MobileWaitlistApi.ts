@@ -1,9 +1,7 @@
 /* tslint:disable:no-unused-variable member-ordering */
 
-
 namespace HostMe.Sdk {
     'use strict';
-
 
     export class MobileWaitlistApi {
         protected basePath = 'http://hostme-services-dev.azurewebsites.net';
@@ -26,7 +24,6 @@ namespace HostMe.Sdk {
             return <T1&T2>objA;
         }
 
-
         /**
          * 
          * 
@@ -38,26 +35,15 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling checkInWithWaiting');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'PUT',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -67,7 +53,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Closes current waiting position. When person gets a table, hostess should close current position.
          * 
@@ -79,26 +64,15 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling close');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'PUT',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -108,7 +82,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Confirm waiting record from HostMe mobile application
          * 
@@ -121,34 +94,20 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'confirmationCode' is set
             if (!confirmationCode) {
                 throw new Error('Missing required parameter confirmationCode when calling confirmWithApp');
             }
-
-
-
             // verify required parameter 'conf' is set
             if (!conf) {
                 throw new Error('Missing required parameter conf when calling confirmWithApp');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'POST',
                 url: localVarPath,
                 json: true,
                 data: conf,
-                
-                
-                params: queryParameters,
+                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -158,7 +117,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
          * 
@@ -169,27 +127,16 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'value' is set
             if (!value) {
                 throw new Error('Missing required parameter value when calling getInLine');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'POST',
                 url: localVarPath,
                 json: true,
                 data: value,
-                
-                
-                params: queryParameters,
+                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -199,7 +146,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Returns current user waiting item
          * 
@@ -209,19 +155,11 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'GET',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -231,7 +169,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Cancels specified waiting position. Client may decide to go to another restaurant and cancel current waiting item
          * 
@@ -244,34 +181,20 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling leaveTheLine');
             }
-
-
-
             // verify required parameter 'comment' is set
             if (!comment) {
                 throw new Error('Missing required parameter comment when calling leaveTheLine');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'PUT',
                 url: localVarPath,
                 json: true,
                 data: comment,
-                
-                
-                params: queryParameters,
+                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -281,7 +204,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Mark all message as read.
          * 
@@ -293,26 +215,15 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling markAllMessagesAsRead');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'POST',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -322,7 +233,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Put waiting item, on hold manually
          * 
@@ -335,38 +245,23 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'restaurantId' is set
             if (!restaurantId) {
                 throw new Error('Missing required parameter restaurantId when calling putOnHold');
             }
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling putOnHold');
             }
-
-
-
             if (restaurantId !== undefined) {
                 queryParameters['restaurantId'] = restaurantId;
             }
-
-
-
-
 
             let httpRequestParams: any = {
                 method: 'GET',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -376,7 +271,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Sends a message related to specified waiting item.
          * 
@@ -389,34 +283,20 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling sendMessage');
             }
-
-
-
             // verify required parameter 'body' is set
             if (!body) {
                 throw new Error('Missing required parameter body when calling sendMessage');
             }
-
-
-
-
-
-
             let httpRequestParams: any = {
                 method: 'POST',
                 url: localVarPath,
                 json: true,
                 data: body,
-                
-                
-                params: queryParameters,
+                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -426,7 +306,6 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
         /**
          * Set waiting item off hold
          * 
@@ -439,38 +318,23 @@ namespace HostMe.Sdk {
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-
-
-
             // verify required parameter 'restaurantId' is set
             if (!restaurantId) {
                 throw new Error('Missing required parameter restaurantId when calling takeOffHold');
             }
-
-
-
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
                 throw new Error('Missing required parameter waitingItemId when calling takeOffHold');
             }
-
-
-
             if (restaurantId !== undefined) {
                 queryParameters['restaurantId'] = restaurantId;
             }
-
-
-
-
 
             let httpRequestParams: any = {
                 method: 'GET',
                 url: localVarPath,
                 json: true,
-                
-                
-                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -480,7 +344,5 @@ namespace HostMe.Sdk {
 
             return this.$http(httpRequestParams);
         }
-
     }
 }
-
