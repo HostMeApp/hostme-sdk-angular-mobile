@@ -6,8 +6,6 @@ namespace HostMe.Sdk {
 
         "reservationId": number;
 
-        "phoneNumber"?: string;
-
         "reservationTime": Date;
 
         "groupSize": number;
