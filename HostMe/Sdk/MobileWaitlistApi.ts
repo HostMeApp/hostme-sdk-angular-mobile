@@ -258,7 +258,7 @@ namespace HostMe.Sdk {
             }
 
             let httpRequestParams: any = {
-                method: 'GET',
+                method: 'PUT',
                 url: localVarPath,
                 json: true,
                                                 params: queryParameters,
@@ -331,7 +331,7 @@ namespace HostMe.Sdk {
             }
 
             let httpRequestParams: any = {
-                method: 'GET',
+                method: 'PUT',
                 url: localVarPath,
                 json: true,
                                                 params: queryParameters,

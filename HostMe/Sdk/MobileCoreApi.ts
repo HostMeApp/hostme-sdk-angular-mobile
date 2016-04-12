@@ -114,6 +114,35 @@ namespace HostMe.Sdk {
         /**
          * 
          * 
+         * @param model 
+         */
+        public createRestaurantUser (model: CreateRestaurantCustomer, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account';
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'model' is set
+            if (!model) {
+                throw new Error('Missing required parameter model when calling createRestaurantUser');
+            }
+            let httpRequestParams: any = {
+                method: 'POST',
+                url: localVarPath,
+                json: true,
+                data: model,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
          * @param lat 
          * @param lon 
          * @param name 

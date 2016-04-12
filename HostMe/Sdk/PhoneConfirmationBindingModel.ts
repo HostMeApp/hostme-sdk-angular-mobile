@@ -21,9 +21,6 @@ namespace HostMe.Sdk {
          */
         "lattitude"?: number;
 
-        /**
-         * Optional. Only is used.
-         */
         "customerName": string;
 
         "notificationUrl": string;

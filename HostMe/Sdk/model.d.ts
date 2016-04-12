@@ -2,6 +2,7 @@
 /// <reference path="BusinessHours.ts" />
 /// <reference path="CampaignInfo.ts" />
 /// <reference path="ChangePasswordBindingModel.ts" />
+/// <reference path="CreateRestaurantCustomer.ts" />
 /// <reference path="ExternalLoginViewModel.ts" />
 /// <reference path="HourlyInterval.ts" />
 /// <reference path="JoinMembershipBindingModel.ts" />

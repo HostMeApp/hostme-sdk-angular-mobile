@@ -4,8 +4,6 @@ namespace HostMe.Sdk {
 
     export interface UpdateReservationBindingModel {
 
-        "reservationId": number;
-
         "reservationTime": Date;
 
         "groupSize": number;
