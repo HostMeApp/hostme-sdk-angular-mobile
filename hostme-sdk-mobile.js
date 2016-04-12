@@ -82,6 +82,13 @@ var HostMe;
         'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
 /* tslint:disable:no-unused-variable member-ordering */
 var HostMe;
 (function (HostMe) {
@@ -176,6 +183,32 @@ var HostMe;
                     url: localVarPath,
                     json: true,
                     data: token,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             *
+             *
+             * @param model
+             */
+            MobileCoreApi.prototype.createRestaurantUser = function (model, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/core/mb/account';
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'model' is set
+                if (!model) {
+                    throw new Error('Missing required parameter model when calling createRestaurantUser');
+                }
+                var httpRequestParams = {
+                    method: 'POST',
+                    url: localVarPath,
+                    json: true,
+                    data: model,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -1431,7 +1464,7 @@ var HostMe;
                     queryParameters['restaurantId'] = restaurantId;
                 }
                 var httpRequestParams = {
-                    method: 'GET',
+                    method: 'PUT',
                     url: localVarPath,
                     json: true,
                     params: queryParameters,
@@ -1497,7 +1530,7 @@ var HostMe;
                     queryParameters['restaurantId'] = restaurantId;
                 }
                 var httpRequestParams = {
-                    method: 'GET',
+                    method: 'PUT',
                     url: localVarPath,
                     json: true,
                     params: queryParameters,
