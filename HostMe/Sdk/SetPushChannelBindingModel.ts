@@ -7,10 +7,6 @@ namespace HostMe.Sdk {
         "notificationUrl": string;
 
         "deviceType": string;
-
-        "longitude"?: number;
-
-        "lattitude"?: number;
     }
 
 }

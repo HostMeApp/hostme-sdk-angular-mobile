@@ -19,7 +19,7 @@ namespace HostMe.Sdk {
         /**
          * Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.
          */
-        "lattitude"?: number;
+        "latitude"?: number;
 
         "customerName": string;
 
