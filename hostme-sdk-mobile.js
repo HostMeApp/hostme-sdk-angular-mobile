@@ -1448,7 +1448,7 @@ var HostMe;
              * @param waitingItemId Waiting item identifier
              */
             MobileWaitlistApi.prototype.putOnHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/wm/mb/waitings/waitings/{waitingItemId}/putonhold'
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
                     .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -1514,7 +1514,7 @@ var HostMe;
              * @param waitingItemId Waiting item identifier
              */
             MobileWaitlistApi.prototype.takeOffHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/wm/mb/waitings/waitings/{waitingItemId}/takeoffhold'
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
                     .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
