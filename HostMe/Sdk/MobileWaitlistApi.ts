@@ -240,7 +240,7 @@ namespace HostMe.Sdk {
          * @param waitingItemId Waiting item identifier
          */
         public putOnHold (restaurantId: number, waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/waitings/{waitingItemId}/putonhold'
+            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -313,7 +313,7 @@ namespace HostMe.Sdk {
          * @param waitingItemId Waiting item identifier
          */
         public takeOffHold (restaurantId: number, waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/waitings/{waitingItemId}/takeoffhold'
+            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
