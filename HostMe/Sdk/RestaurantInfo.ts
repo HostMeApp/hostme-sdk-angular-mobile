@@ -6,6 +6,8 @@ namespace HostMe.Sdk {
 
         "hoursInterval"?: number;
 
+        "city"?: string;
+
         "maxPartySize"?: number;
 
         "minPartySize"?: number;
@@ -46,8 +48,6 @@ namespace HostMe.Sdk {
 
         "distance"?: number;
 
-        "rating"?: number;
-
         "hasLoyaltyProgram"?: boolean;
 
         "acceptRemouteLine"?: boolean;
@@ -57,12 +57,6 @@ namespace HostMe.Sdk {
         "allowManualHold"?: boolean;
 
         "currentLineStats"?: WaitingStats;
-
-        "isFavorite"?: boolean;
-
-        "numberOfDeals"?: number;
-
-        "numberOfVotes"?: number;
 
         "reservationIncomeEmail"?: string;
     }
