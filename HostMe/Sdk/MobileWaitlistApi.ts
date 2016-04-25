@@ -122,7 +122,7 @@ namespace HostMe.Sdk {
          * 
          * @param value 
          */
-        public getInLine (value: NewRemoteWaitingBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        public getInLine (value: NewRemoteWaitingBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<WaitingItem> {
             const localVarPath = this.basePath + '/api/wm/mb/waitings';
 
             let queryParameters: any = {};
