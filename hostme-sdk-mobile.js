@@ -1165,18 +1165,18 @@ var HostMe;
              * @param reservationId Reservation identifier
              * @param body The body of the message
              */
-            MobileReservationsApi.prototype.sendMessage = function (reservationId, body, extraHttpRequestParams) {
+            MobileReservationsApi.prototype.sendMessageToReservation = function (reservationId, body, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/messages'
                     .replace('{' + 'reservationId' + '}', String(reservationId));
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'reservationId' is set
                 if (!reservationId) {
-                    throw new Error('Missing required parameter reservationId when calling sendMessage');
+                    throw new Error('Missing required parameter reservationId when calling sendMessageToReservation');
                 }
                 // verify required parameter 'body' is set
                 if (!body) {
-                    throw new Error('Missing required parameter body when calling sendMessage');
+                    throw new Error('Missing required parameter body when calling sendMessageToReservation');
                 }
                 var httpRequestParams = {
                     method: 'POST',
@@ -1481,18 +1481,18 @@ var HostMe;
              * @param waitingItemId Waiting item identifier
              * @param body The body of the message
              */
-            MobileWaitlistApi.prototype.sendMessage = function (waitingItemId, body, extraHttpRequestParams) {
+            MobileWaitlistApi.prototype.sendMessageToWaiting = function (waitingItemId, body, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
                     .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'waitingItemId' is set
                 if (!waitingItemId) {
-                    throw new Error('Missing required parameter waitingItemId when calling sendMessage');
+                    throw new Error('Missing required parameter waitingItemId when calling sendMessageToWaiting');
                 }
                 // verify required parameter 'body' is set
                 if (!body) {
-                    throw new Error('Missing required parameter body when calling sendMessage');
+                    throw new Error('Missing required parameter body when calling sendMessageToWaiting');
                 }
                 var httpRequestParams = {
                     method: 'POST',
