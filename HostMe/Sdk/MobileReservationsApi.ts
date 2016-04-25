@@ -180,7 +180,7 @@ namespace HostMe.Sdk {
          * @param reservationId Reservation identifier
          * @param body The body of the message
          */
-        public sendMessage (reservationId: string, body: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        public sendMessageToReservation (reservationId: string, body: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/messages'
                 .replace('{' + 'reservationId' + '}', String(reservationId));
 
@@ -188,11 +188,11 @@ namespace HostMe.Sdk {
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
             // verify required parameter 'reservationId' is set
             if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling sendMessage');
+                throw new Error('Missing required parameter reservationId when calling sendMessageToReservation');
             }
             // verify required parameter 'body' is set
             if (!body) {
-                throw new Error('Missing required parameter body when calling sendMessage');
+                throw new Error('Missing required parameter body when calling sendMessageToReservation');
             }
             let httpRequestParams: any = {
                 method: 'POST',

@@ -88,7 +88,7 @@ namespace HostMe.Sdk {
          * @param confirmationCode Confirmation code that has been generated during initial registration by hostess
          * @param conf Conformation model
          */
-        public confirmWithApp (confirmationCode: number, conf: PhoneConfirmationBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<WaitingItem> {
+        public confirmWithApp (confirmationCode: number, conf: PhoneConfirmationBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
                 .replace('{' + 'confirmationCode' + '}', String(confirmationCode));
 
@@ -122,7 +122,7 @@ namespace HostMe.Sdk {
          * 
          * @param value 
          */
-        public getInLine (value: NewRemoteWaitingBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<WaitingItem> {
+        public getInLine (value: NewRemoteWaitingBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/wm/mb/waitings';
 
             let queryParameters: any = {};
@@ -277,7 +277,7 @@ namespace HostMe.Sdk {
          * @param waitingItemId Waiting item identifier
          * @param body The body of the message
          */
-        public sendMessage (waitingItemId: number, body: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Message> {
+        public sendMessageToWaiting (waitingItemId: number, body: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
@@ -285,11 +285,11 @@ namespace HostMe.Sdk {
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
             // verify required parameter 'waitingItemId' is set
             if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling sendMessage');
+                throw new Error('Missing required parameter waitingItemId when calling sendMessageToWaiting');
             }
             // verify required parameter 'body' is set
             if (!body) {
-                throw new Error('Missing required parameter body when calling sendMessage');
+                throw new Error('Missing required parameter body when calling sendMessageToWaiting');
             }
             let httpRequestParams: any = {
                 method: 'POST',
