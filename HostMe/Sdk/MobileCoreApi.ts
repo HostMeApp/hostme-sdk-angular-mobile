@@ -114,35 +114,6 @@ namespace HostMe.Sdk {
         /**
          * 
          * 
-         * @param model 
-         */
-        public createRestaurantUser (model: CreateRestaurantCustomer, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account';
-
-            let queryParameters: any = {};
-            let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling createRestaurantUser');
-            }
-            let httpRequestParams: any = {
-                method: 'POST',
-                url: localVarPath,
-                json: true,
-                data: model,
-                                params: queryParameters,
-                headers: headerParams
-            };
-
-            if (extraHttpRequestParams) {
-                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-            }
-
-            return this.$http(httpRequestParams);
-        }
-        /**
-         * 
-         * 
          * @param lat 
          * @param lon 
          * @param name 
@@ -441,7 +412,7 @@ namespace HostMe.Sdk {
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
             let httpRequestParams: any = {
-                method: 'POST',
+                method: 'GET',
                 url: localVarPath,
                 json: true,
                                                 params: queryParameters,
@@ -596,23 +567,26 @@ namespace HostMe.Sdk {
         /**
          * 
          * 
-         * @param model 
+         * @param modelEmail 
          */
-        public resetPassword (model: ResetPasswordBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        public resetPassword (modelEmail: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/core/mb/account/ResetPassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling resetPassword');
+            // verify required parameter 'modelEmail' is set
+            if (!modelEmail) {
+                throw new Error('Missing required parameter modelEmail when calling resetPassword');
             }
+            if (modelEmail !== undefined) {
+                queryParameters['model.email'] = modelEmail;
+            }
+
             let httpRequestParams: any = {
-                method: 'POST',
+                method: 'GET',
                 url: localVarPath,
                 json: true,
-                data: model,
-                                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 

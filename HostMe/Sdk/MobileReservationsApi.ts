@@ -146,7 +146,7 @@ namespace HostMe.Sdk {
             return this.$http(httpRequestParams);
         }
         /**
-         * Mark all message as read.
+         * Mark all reservation message as read.
          * 
          * @param reservationId Reservation identifier
          */
