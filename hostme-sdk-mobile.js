@@ -194,32 +194,6 @@ var HostMe;
             /**
              *
              *
-             * @param model
-             */
-            MobileCoreApi.prototype.createRestaurantUser = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account';
-                var queryParameters = {};
-                var headerParams = this.extendObj({}, this.defaultHeaders);
-                // verify required parameter 'model' is set
-                if (!model) {
-                    throw new Error('Missing required parameter model when calling createRestaurantUser');
-                }
-                var httpRequestParams = {
-                    method: 'POST',
-                    url: localVarPath,
-                    json: true,
-                    data: model,
-                    params: queryParameters,
-                    headers: headerParams
-                };
-                if (extraHttpRequestParams) {
-                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-                }
-                return this.$http(httpRequestParams);
-            };
-            /**
-             *
-             *
              * @param lat
              * @param lon
              * @param name
@@ -480,7 +454,7 @@ var HostMe;
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 var httpRequestParams = {
-                    method: 'POST',
+                    method: 'GET',
                     url: localVarPath,
                     json: true,
                     params: queryParameters,
@@ -618,21 +592,23 @@ var HostMe;
             /**
              *
              *
-             * @param model
+             * @param modelEmail
              */
-            MobileCoreApi.prototype.resetPassword = function (model, extraHttpRequestParams) {
+            MobileCoreApi.prototype.resetPassword = function (modelEmail, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/core/mb/account/ResetPassword';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
-                // verify required parameter 'model' is set
-                if (!model) {
-                    throw new Error('Missing required parameter model when calling resetPassword');
+                // verify required parameter 'modelEmail' is set
+                if (!modelEmail) {
+                    throw new Error('Missing required parameter modelEmail when calling resetPassword');
+                }
+                if (modelEmail !== undefined) {
+                    queryParameters['model.email'] = modelEmail;
                 }
                 var httpRequestParams = {
-                    method: 'POST',
+                    method: 'GET',
                     url: localVarPath,
                     json: true,
-                    data: model,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -1134,7 +1110,7 @@ var HostMe;
                 return this.$http(httpRequestParams);
             };
             /**
-             * Mark all message as read.
+             * Mark all reservation message as read.
              *
              * @param reservationId Reservation identifier
              */
