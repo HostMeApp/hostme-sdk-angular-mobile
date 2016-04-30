@@ -89,6 +89,160 @@ var HostMe;
         'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+        var IEdmSchemaElement;
+        (function (IEdmSchemaElement) {
+            (function (SchemaElementKindEnum) {
+                SchemaElementKindEnum[SchemaElementKindEnum["None"] = 'None'] = "None";
+                SchemaElementKindEnum[SchemaElementKindEnum["TypeDefinition"] = 'TypeDefinition'] = "TypeDefinition";
+                SchemaElementKindEnum[SchemaElementKindEnum["Function"] = 'Function'] = "Function";
+                SchemaElementKindEnum[SchemaElementKindEnum["ValueTerm"] = 'ValueTerm'] = "ValueTerm";
+                SchemaElementKindEnum[SchemaElementKindEnum["EntityContainer"] = 'EntityContainer'] = "EntityContainer";
+            })(IEdmSchemaElement.SchemaElementKindEnum || (IEdmSchemaElement.SchemaElementKindEnum = {}));
+            var SchemaElementKindEnum = IEdmSchemaElement.SchemaElementKindEnum;
+        })(IEdmSchemaElement = Sdk.IEdmSchemaElement || (Sdk.IEdmSchemaElement = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+        var IEdmTerm;
+        (function (IEdmTerm) {
+            (function (TermKindEnum) {
+                TermKindEnum[TermKindEnum["None"] = 'None'] = "None";
+                TermKindEnum[TermKindEnum["Type"] = 'Type'] = "Type";
+                TermKindEnum[TermKindEnum["Value"] = 'Value'] = "Value";
+            })(IEdmTerm.TermKindEnum || (IEdmTerm.TermKindEnum = {}));
+            var TermKindEnum = IEdmTerm.TermKindEnum;
+            (function (SchemaElementKindEnum) {
+                SchemaElementKindEnum[SchemaElementKindEnum["None"] = 'None'] = "None";
+                SchemaElementKindEnum[SchemaElementKindEnum["TypeDefinition"] = 'TypeDefinition'] = "TypeDefinition";
+                SchemaElementKindEnum[SchemaElementKindEnum["Function"] = 'Function'] = "Function";
+                SchemaElementKindEnum[SchemaElementKindEnum["ValueTerm"] = 'ValueTerm'] = "ValueTerm";
+                SchemaElementKindEnum[SchemaElementKindEnum["EntityContainer"] = 'EntityContainer'] = "EntityContainer";
+            })(IEdmTerm.SchemaElementKindEnum || (IEdmTerm.SchemaElementKindEnum = {}));
+            var SchemaElementKindEnum = IEdmTerm.SchemaElementKindEnum;
+        })(IEdmTerm = Sdk.IEdmTerm || (Sdk.IEdmTerm = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+        var IEdmType;
+        (function (IEdmType) {
+            (function (TypeKindEnum) {
+                TypeKindEnum[TypeKindEnum["None"] = 'None'] = "None";
+                TypeKindEnum[TypeKindEnum["Primitive"] = 'Primitive'] = "Primitive";
+                TypeKindEnum[TypeKindEnum["Entity"] = 'Entity'] = "Entity";
+                TypeKindEnum[TypeKindEnum["Complex"] = 'Complex'] = "Complex";
+                TypeKindEnum[TypeKindEnum["Row"] = 'Row'] = "Row";
+                TypeKindEnum[TypeKindEnum["Collection"] = 'Collection'] = "Collection";
+                TypeKindEnum[TypeKindEnum["EntityReference"] = 'EntityReference'] = "EntityReference";
+                TypeKindEnum[TypeKindEnum["Enum"] = 'Enum'] = "Enum";
+            })(IEdmType.TypeKindEnum || (IEdmType.TypeKindEnum = {}));
+            var TypeKindEnum = IEdmType.TypeKindEnum;
+        })(IEdmType = Sdk.IEdmType || (Sdk.IEdmType = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
 /* tslint:disable:no-unused-variable member-ordering */
 var HostMe;
 (function (HostMe) {
@@ -99,7 +253,7 @@ var HostMe;
             function MobileCoreApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
+                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -119,7 +273,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.addExternalLogin = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/AddExternalLogin';
+                var localVarPath = this.basePath + '/api/core/mb/account/addExternalLogin';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -145,7 +299,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.changePassword = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/ChangePassword';
+                var localVarPath = this.basePath + '/api/core/mb/account/changePassword';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -168,21 +322,21 @@ var HostMe;
             /**
              *
              *
-             * @param token
+             * @param checkinContract
              */
-            MobileCoreApi.prototype.checkIn = function (token, extraHttpRequestParams) {
+            MobileCoreApi.prototype.checkIn = function (checkinContract, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/core/mb/restaurant/checkin';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
-                // verify required parameter 'token' is set
-                if (!token) {
-                    throw new Error('Missing required parameter token when calling checkIn');
+                // verify required parameter 'checkinContract' is set
+                if (!checkinContract) {
+                    throw new Error('Missing required parameter checkinContract when calling checkIn');
                 }
                 var httpRequestParams = {
                     method: 'PUT',
                     url: localVarPath,
                     json: true,
-                    data: token,
+                    data: checkinContract,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -274,7 +428,7 @@ var HostMe;
              * @param generateState
              */
             MobileCoreApi.prototype.getManageInfo = function (returnUrl, generateState, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/ManageInfo';
+                var localVarPath = this.basePath + '/api/core/mb/account/manageInfo';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'returnUrl' is set
@@ -409,26 +563,6 @@ var HostMe;
              *
              *
              */
-            MobileCoreApi.prototype.getUserInfo = function (extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/UserInfo';
-                var queryParameters = {};
-                var headerParams = this.extendObj({}, this.defaultHeaders);
-                var httpRequestParams = {
-                    method: 'GET',
-                    url: localVarPath,
-                    json: true,
-                    params: queryParameters,
-                    headers: headerParams
-                };
-                if (extraHttpRequestParams) {
-                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-                }
-                return this.$http(httpRequestParams);
-            };
-            /**
-             *
-             *
-             */
             MobileCoreApi.prototype.getUserProfile = function (extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/core/mb/account/profile';
                 var queryParameters = {};
@@ -450,7 +584,7 @@ var HostMe;
              *
              */
             MobileCoreApi.prototype.logout = function (extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/Logout';
+                var localVarPath = this.basePath + '/api/core/mb/account/logout';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 var httpRequestParams = {
@@ -517,7 +651,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.register = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/Register';
+                var localVarPath = this.basePath + '/api/core/mb/account/register';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -543,7 +677,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.registerExternal = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/RegisterExternal';
+                var localVarPath = this.basePath + '/api/core/mb/account/registerExternal';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -569,7 +703,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.removeLogin = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/RemoveLogin';
+                var localVarPath = this.basePath + '/api/core/mb/account/removeLogin';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -592,23 +726,21 @@ var HostMe;
             /**
              *
              *
-             * @param modelEmail
+             * @param model
              */
-            MobileCoreApi.prototype.resetPassword = function (modelEmail, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/ResetPassword';
+            MobileCoreApi.prototype.resetPassword = function (model, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/core/mb/account/resetPassword';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
-                // verify required parameter 'modelEmail' is set
-                if (!modelEmail) {
-                    throw new Error('Missing required parameter modelEmail when calling resetPassword');
-                }
-                if (modelEmail !== undefined) {
-                    queryParameters['model.email'] = modelEmail;
+                // verify required parameter 'model' is set
+                if (!model) {
+                    throw new Error('Missing required parameter model when calling resetPassword');
                 }
                 var httpRequestParams = {
-                    method: 'GET',
+                    method: 'POST',
                     url: localVarPath,
                     json: true,
+                    data: model,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -623,7 +755,7 @@ var HostMe;
              * @param model
              */
             MobileCoreApi.prototype.setPassword = function (model, extraHttpRequestParams) {
-                var localVarPath = this.basePath + '/api/core/mb/account/SetPassword';
+                var localVarPath = this.basePath + '/api/core/mb/account/setPassword';
                 var queryParameters = {};
                 var headerParams = this.extendObj({}, this.defaultHeaders);
                 // verify required parameter 'model' is set
@@ -711,7 +843,7 @@ var HostMe;
             function MobileLoyaltyApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
+                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -755,9 +887,8 @@ var HostMe;
              *
              *
              * @param restaurantId
-             * @param value
              */
-            MobileLoyaltyApi.prototype.enrollIntoLoyaltyProgram = function (restaurantId, value, extraHttpRequestParams) {
+            MobileLoyaltyApi.prototype.enrollIntoLoyaltyProgram = function (restaurantId, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
                     .replace('{' + 'restaurantId' + '}', String(restaurantId));
                 var queryParameters = {};
@@ -766,15 +897,10 @@ var HostMe;
                 if (!restaurantId) {
                     throw new Error('Missing required parameter restaurantId when calling enrollIntoLoyaltyProgram');
                 }
-                // verify required parameter 'value' is set
-                if (!value) {
-                    throw new Error('Missing required parameter value when calling enrollIntoLoyaltyProgram');
-                }
                 var httpRequestParams = {
                     method: 'POST',
                     url: localVarPath,
                     json: true,
-                    data: value,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -987,7 +1113,7 @@ var HostMe;
             function MobileReservationsApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
+                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -1031,9 +1157,9 @@ var HostMe;
              *
              *
              * @param reservationId
-             * @param notes
+             * @param cancelReservationContract
              */
-            MobileReservationsApi.prototype.closeAsCanceled = function (reservationId, notes, extraHttpRequestParams) {
+            MobileReservationsApi.prototype.closeAsCanceled = function (reservationId, cancelReservationContract, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/cancel'
                     .replace('{' + 'reservationId' + '}', String(reservationId));
                 var queryParameters = {};
@@ -1042,15 +1168,15 @@ var HostMe;
                 if (!reservationId) {
                     throw new Error('Missing required parameter reservationId when calling closeAsCanceled');
                 }
-                // verify required parameter 'notes' is set
-                if (!notes) {
-                    throw new Error('Missing required parameter notes when calling closeAsCanceled');
+                // verify required parameter 'cancelReservationContract' is set
+                if (!cancelReservationContract) {
+                    throw new Error('Missing required parameter cancelReservationContract when calling closeAsCanceled');
                 }
                 var httpRequestParams = {
                     method: 'PUT',
                     url: localVarPath,
                     json: true,
-                    data: notes,
+                    data: cancelReservationContract,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -1110,8 +1236,8 @@ var HostMe;
                 return this.$http(httpRequestParams);
             };
             /**
-             * Mark all reservation message as read.
-             *
+             * Mark all messages as read.
+             * Mark all reservation messages as read.
              * @param reservationId Reservation identifier
              */
             MobileReservationsApi.prototype.readAllMessage = function (reservationId, extraHttpRequestParams) {
@@ -1139,9 +1265,9 @@ var HostMe;
              * Sends a message related to specified reservation
              *
              * @param reservationId Reservation identifier
-             * @param body The body of the message
+             * @param createMessageContract The message with body
              */
-            MobileReservationsApi.prototype.sendMessageToReservation = function (reservationId, body, extraHttpRequestParams) {
+            MobileReservationsApi.prototype.sendMessageToReservation = function (reservationId, createMessageContract, extraHttpRequestParams) {
                 var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/messages'
                     .replace('{' + 'reservationId' + '}', String(reservationId));
                 var queryParameters = {};
@@ -1150,15 +1276,15 @@ var HostMe;
                 if (!reservationId) {
                     throw new Error('Missing required parameter reservationId when calling sendMessageToReservation');
                 }
-                // verify required parameter 'body' is set
-                if (!body) {
-                    throw new Error('Missing required parameter body when calling sendMessageToReservation');
+                // verify required parameter 'createMessageContract' is set
+                if (!createMessageContract) {
+                    throw new Error('Missing required parameter createMessageContract when calling sendMessageToReservation');
                 }
                 var httpRequestParams = {
                     method: 'POST',
                     url: localVarPath,
                     json: true,
-                    data: body,
+                    data: createMessageContract,
                     params: queryParameters,
                     headers: headerParams
                 };
@@ -1203,6 +1329,318 @@ var HostMe;
             return MobileReservationsApi;
         }());
         Sdk.MobileReservationsApi = MobileReservationsApi;
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+/* tslint:disable:no-unused-variable member-ordering */
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+        var MobileWaitingManagementApi = (function () {
+            function MobileWaitingManagementApi($http, $httpParamSerializer, basePath) {
+                this.$http = $http;
+                this.$httpParamSerializer = $httpParamSerializer;
+                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
+                this.defaultHeaders = {};
+                if (basePath) {
+                    this.basePath = basePath;
+                }
+            }
+            MobileWaitingManagementApi.prototype.extendObj = function (objA, objB) {
+                for (var key in objB) {
+                    if (objB.hasOwnProperty(key)) {
+                        objA[key] = objB[key];
+                    }
+                }
+                return objA;
+            };
+            /**
+             *
+             *
+             * @param waitingItemId
+             */
+            MobileWaitingManagementApi.prototype.checkInWithWaiting = function (waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/checkin'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling checkInWithWaiting');
+                }
+                var httpRequestParams = {
+                    method: 'PUT',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Closes waiting position.
+             * Closes current waiting position. When person gets a table, hostess should close current position.
+             * @param waitingItemId Identifier of the waiting item
+             */
+            MobileWaitingManagementApi.prototype.close = function (waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/close'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling close');
+                }
+                var httpRequestParams = {
+                    method: 'PUT',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Confirm waiting record from HostMe mobile application
+             *
+             * @param confirmationCode Confirmation code that has been generated during initial registration by hostess
+             * @param conf Conformation model
+             */
+            MobileWaitingManagementApi.prototype.confirmWithApp = function (confirmationCode, conf, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
+                    .replace('{' + 'confirmationCode' + '}', String(confirmationCode));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'confirmationCode' is set
+                if (!confirmationCode) {
+                    throw new Error('Missing required parameter confirmationCode when calling confirmWithApp');
+                }
+                // verify required parameter 'conf' is set
+                if (!conf) {
+                    throw new Error('Missing required parameter conf when calling confirmWithApp');
+                }
+                var httpRequestParams = {
+                    method: 'POST',
+                    url: localVarPath,
+                    json: true,
+                    data: conf,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Put customer in line.
+             * This method puts customer in a line on a fly. This is remote registration in a line. Waiting item will be automatically put on hold.
+             * @param value
+             */
+            MobileWaitingManagementApi.prototype.getInLine = function (value, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings';
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'value' is set
+                if (!value) {
+                    throw new Error('Missing required parameter value when calling getInLine');
+                }
+                var httpRequestParams = {
+                    method: 'POST',
+                    url: localVarPath,
+                    json: true,
+                    data: value,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Returns current user waiting item
+             *
+             */
+            MobileWaitingManagementApi.prototype.getUserCurrentWaiting = function (extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings';
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                var httpRequestParams = {
+                    method: 'GET',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Cancels waiting position.
+             * Cancels specified waiting position. Client may decide to go to another restaurant and cancel current waiting item.
+             * @param waitingItemId Waiting item identifier
+             */
+            MobileWaitingManagementApi.prototype.leaveTheLine = function (waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/cancel'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling leaveTheLine');
+                }
+                var httpRequestParams = {
+                    method: 'PUT',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Mark all message as read.
+             *
+             * @param waitingItemId Waiting item identifier
+             */
+            MobileWaitingManagementApi.prototype.markAllMessagesAsRead = function (waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/messages/readall'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling markAllMessagesAsRead');
+                }
+                var httpRequestParams = {
+                    method: 'POST',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Put waiting item on hold manually
+             *
+             * @param restaurantId Restaurant identifier
+             * @param waitingItemId Waiting item identifier
+             */
+            MobileWaitingManagementApi.prototype.putOnHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'restaurantId' is set
+                if (!restaurantId) {
+                    throw new Error('Missing required parameter restaurantId when calling putOnHold');
+                }
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling putOnHold');
+                }
+                if (restaurantId !== undefined) {
+                    queryParameters['restaurantId'] = restaurantId;
+                }
+                var httpRequestParams = {
+                    method: 'PUT',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Sends a message related to specified waiting item.
+             *
+             * @param waitingItemId Waiting item identifier
+             * @param createMessage The body of the message
+             */
+            MobileWaitingManagementApi.prototype.sendMessageToWaiting = function (waitingItemId, createMessage, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling sendMessageToWaiting');
+                }
+                // verify required parameter 'createMessage' is set
+                if (!createMessage) {
+                    throw new Error('Missing required parameter createMessage when calling sendMessageToWaiting');
+                }
+                var httpRequestParams = {
+                    method: 'POST',
+                    url: localVarPath,
+                    json: true,
+                    data: createMessage,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            /**
+             * Set waiting item off hold
+             *
+             * @param restaurantId Restaurant identifier
+             * @param waitingItemId Waiting item identifier
+             */
+            MobileWaitingManagementApi.prototype.takeOffHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
+                var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
+                    .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
+                var queryParameters = {};
+                var headerParams = this.extendObj({}, this.defaultHeaders);
+                // verify required parameter 'restaurantId' is set
+                if (!restaurantId) {
+                    throw new Error('Missing required parameter restaurantId when calling takeOffHold');
+                }
+                // verify required parameter 'waitingItemId' is set
+                if (!waitingItemId) {
+                    throw new Error('Missing required parameter waitingItemId when calling takeOffHold');
+                }
+                if (restaurantId !== undefined) {
+                    queryParameters['restaurantId'] = restaurantId;
+                }
+                var httpRequestParams = {
+                    method: 'PUT',
+                    url: localVarPath,
+                    json: true,
+                    params: queryParameters,
+                    headers: headerParams
+                };
+                if (extraHttpRequestParams) {
+                    httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+                }
+                return this.$http(httpRequestParams);
+            };
+            MobileWaitingManagementApi.$inject = ['$http', '$httpParamSerializer'];
+            return MobileWaitingManagementApi;
+        }());
+        Sdk.MobileWaitingManagementApi = MobileWaitingManagementApi;
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
 /* tslint:disable:no-unused-variable member-ordering */
@@ -1580,6 +2018,42 @@ var HostMe;
     var Sdk;
     (function (Sdk) {
         'use strict';
+        var OrderByClause;
+        (function (OrderByClause) {
+            (function (DirectionEnum) {
+                DirectionEnum[DirectionEnum["Ascending"] = 'Ascending'] = "Ascending";
+                DirectionEnum[DirectionEnum["Descending"] = 'Descending'] = "Descending";
+            })(OrderByClause.DirectionEnum || (OrderByClause.DirectionEnum = {}));
+            var DirectionEnum = OrderByClause.DirectionEnum;
+        })(OrderByClause = Sdk.OrderByClause || (Sdk.OrderByClause = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
 var HostMe;
@@ -1596,6 +2070,27 @@ var HostMe;
             })(RedeemRequestInfo.StatusEnum || (RedeemRequestInfo.StatusEnum = {}));
             var StatusEnum = RedeemRequestInfo.StatusEnum;
         })(RedeemRequestInfo = Sdk.RedeemRequestInfo || (Sdk.RedeemRequestInfo = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
 var HostMe;
@@ -1674,6 +2169,13 @@ var HostMe;
     var Sdk;
     (function (Sdk) {
         'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
         var RewardValue;
         (function (RewardValue) {
             (function (TypeEnum) {
@@ -1683,6 +2185,89 @@ var HostMe;
             })(RewardValue.TypeEnum || (RewardValue.TypeEnum = {}));
             var TypeEnum = RewardValue.TypeEnum;
         })(RewardValue = Sdk.RewardValue || (Sdk.RewardValue = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
+        var SingleValueNode;
+        (function (SingleValueNode) {
+            (function (KindEnum) {
+                KindEnum[KindEnum["None"] = 'None'] = "None";
+                KindEnum[KindEnum["Constant"] = 'Constant'] = "Constant";
+                KindEnum[KindEnum["Convert"] = 'Convert'] = "Convert";
+                KindEnum[KindEnum["NonentityRangeVariableReference"] = 'NonentityRangeVariableReference'] = "NonentityRangeVariableReference";
+                KindEnum[KindEnum["BinaryOperator"] = 'BinaryOperator'] = "BinaryOperator";
+                KindEnum[KindEnum["UnaryOperator"] = 'UnaryOperator'] = "UnaryOperator";
+                KindEnum[KindEnum["SingleValuePropertyAccess"] = 'SingleValuePropertyAccess'] = "SingleValuePropertyAccess";
+                KindEnum[KindEnum["CollectionPropertyAccess"] = 'CollectionPropertyAccess'] = "CollectionPropertyAccess";
+                KindEnum[KindEnum["SingleValueFunctionCall"] = 'SingleValueFunctionCall'] = "SingleValueFunctionCall";
+                KindEnum[KindEnum["Any"] = 'Any'] = "Any";
+                KindEnum[KindEnum["CollectionNavigationNode"] = 'CollectionNavigationNode'] = "CollectionNavigationNode";
+                KindEnum[KindEnum["SingleNavigationNode"] = 'SingleNavigationNode'] = "SingleNavigationNode";
+                KindEnum[KindEnum["SingleValueOpenPropertyAccess"] = 'SingleValueOpenPropertyAccess'] = "SingleValueOpenPropertyAccess";
+                KindEnum[KindEnum["SingleEntityCast"] = 'SingleEntityCast'] = "SingleEntityCast";
+                KindEnum[KindEnum["All"] = 'All'] = "All";
+                KindEnum[KindEnum["EntityCollectionCast"] = 'EntityCollectionCast'] = "EntityCollectionCast";
+                KindEnum[KindEnum["EntityRangeVariableReference"] = 'EntityRangeVariableReference'] = "EntityRangeVariableReference";
+                KindEnum[KindEnum["SingleEntityFunctionCall"] = 'SingleEntityFunctionCall'] = "SingleEntityFunctionCall";
+                KindEnum[KindEnum["CollectionFunctionCall"] = 'CollectionFunctionCall'] = "CollectionFunctionCall";
+                KindEnum[KindEnum["EntityCollectionFunctionCall"] = 'EntityCollectionFunctionCall'] = "EntityCollectionFunctionCall";
+                KindEnum[KindEnum["NamedFunctionParameter"] = 'NamedFunctionParameter'] = "NamedFunctionParameter";
+            })(SingleValueNode.KindEnum || (SingleValueNode.KindEnum = {}));
+            var KindEnum = SingleValueNode.KindEnum;
+        })(SingleValueNode = Sdk.SingleValueNode || (Sdk.SingleValueNode = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
 var HostMe;
