@@ -4,7 +4,7 @@ namespace HostMe.Sdk {
     'use strict';
 
     export class MobileCoreApi {
-        protected basePath = 'http://hostme-services-dev.azurewebsites.net';
+        protected basePath = 'http://hostme-services-tables.azurewebsites.net';
         public defaultHeaders : any = {};
 
         static $inject: string[] = ['$http', '$httpParamSerializer'];
@@ -29,8 +29,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public addExternalLogin (model: AddExternalLoginBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/AddExternalLogin';
+        public addExternalLogin (model: AddExternalLogin, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/addExternalLogin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -58,8 +58,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public changePassword (model: ChangePasswordBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/ChangePassword';
+        public changePassword (model: ChangePassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/changePassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -85,22 +85,22 @@ namespace HostMe.Sdk {
         /**
          * 
          * 
-         * @param token 
+         * @param checkinContract 
          */
-        public checkIn (token: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Transaction> {
+        public checkIn (checkinContract: TransactionCheckin, extraHttpRequestParams?: any ) : ng.IHttpPromise<Transaction> {
             const localVarPath = this.basePath + '/api/core/mb/restaurant/checkin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'token' is set
-            if (!token) {
-                throw new Error('Missing required parameter token when calling checkIn');
+            // verify required parameter 'checkinContract' is set
+            if (!checkinContract) {
+                throw new Error('Missing required parameter checkinContract when calling checkIn');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
                 url: localVarPath,
                 json: true,
-                data: token,
+                data: checkinContract,
                                 params: queryParameters,
                 headers: headerParams
             };
@@ -206,8 +206,8 @@ namespace HostMe.Sdk {
          * @param returnUrl 
          * @param generateState 
          */
-        public getManageInfo (returnUrl: string, generateState?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<ManageInfoViewModel> {
-            const localVarPath = this.basePath + '/api/core/mb/account/ManageInfo';
+        public getManageInfo (returnUrl: string, generateState?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<ManageInfo> {
+            const localVarPath = this.basePath + '/api/core/mb/account/manageInfo';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -360,29 +360,6 @@ namespace HostMe.Sdk {
          * 
          * 
          */
-        public getUserInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<UserInfoViewModel> {
-            const localVarPath = this.basePath + '/api/core/mb/account/UserInfo';
-
-            let queryParameters: any = {};
-            let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            let httpRequestParams: any = {
-                method: 'GET',
-                url: localVarPath,
-                json: true,
-                                                params: queryParameters,
-                headers: headerParams
-            };
-
-            if (extraHttpRequestParams) {
-                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-            }
-
-            return this.$http(httpRequestParams);
-        }
-        /**
-         * 
-         * 
-         */
         public getUserProfile (extraHttpRequestParams?: any ) : ng.IHttpPromise<UserProfile> {
             const localVarPath = this.basePath + '/api/core/mb/account/profile';
 
@@ -407,7 +384,7 @@ namespace HostMe.Sdk {
          * 
          */
         public logout (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/Logout';
+            const localVarPath = this.basePath + '/api/core/mb/account/logout';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -482,8 +459,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public register (model: RegisterBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/Register';
+        public register (model: RegisterUser, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/register';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -511,8 +488,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public registerExternal (model: RegisterExternalBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/RegisterExternal';
+        public registerExternal (model: RegisterExternalUser, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/registerExternal';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -540,8 +517,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public removeLogin (model: RemoveLoginBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/RemoveLogin';
+        public removeLogin (model: RemoveLogin, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/removeLogin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -567,26 +544,23 @@ namespace HostMe.Sdk {
         /**
          * 
          * 
-         * @param modelEmail 
+         * @param model 
          */
-        public resetPassword (modelEmail: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/ResetPassword';
+        public resetPassword (model: ResetPassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/resetPassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'modelEmail' is set
-            if (!modelEmail) {
-                throw new Error('Missing required parameter modelEmail when calling resetPassword');
+            // verify required parameter 'model' is set
+            if (!model) {
+                throw new Error('Missing required parameter model when calling resetPassword');
             }
-            if (modelEmail !== undefined) {
-                queryParameters['model.email'] = modelEmail;
-            }
-
             let httpRequestParams: any = {
-                method: 'GET',
+                method: 'POST',
                 url: localVarPath,
                 json: true,
-                                                params: queryParameters,
+                data: model,
+                                params: queryParameters,
                 headers: headerParams
             };
 
@@ -601,8 +575,8 @@ namespace HostMe.Sdk {
          * 
          * @param model 
          */
-        public setPassword (model: SetPasswordBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/SetPassword';
+        public setPassword (model: SetPassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.basePath + '/api/core/mb/account/setPassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -630,7 +604,7 @@ namespace HostMe.Sdk {
          * 
          * @param channel 
          */
-        public setPushChannelAsync (channel: SetPushChannelBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        public setPushChannelAsync (channel: SetPushChannel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
             const localVarPath = this.basePath + '/api/core/mb/account/setPushChannel';
 
             let queryParameters: any = {};

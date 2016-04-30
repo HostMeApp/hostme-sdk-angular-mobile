@@ -4,7 +4,7 @@ namespace HostMe.Sdk {
     'use strict';
 
     export class MobileLoyaltyApi {
-        protected basePath = 'http://hostme-services-dev.azurewebsites.net';
+        protected basePath = 'http://hostme-services-tables.azurewebsites.net';
         public defaultHeaders : any = {};
 
         static $inject: string[] = ['$http', '$httpParamSerializer'];
@@ -57,9 +57,8 @@ namespace HostMe.Sdk {
          * 
          * 
          * @param restaurantId 
-         * @param value 
          */
-        public enrollIntoLoyaltyProgram (restaurantId: number, value: JoinMembershipBindingModel, extraHttpRequestParams?: any ) : ng.IHttpPromise<Membership> {
+        public enrollIntoLoyaltyProgram (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<Membership> {
             const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
@@ -69,16 +68,11 @@ namespace HostMe.Sdk {
             if (!restaurantId) {
                 throw new Error('Missing required parameter restaurantId when calling enrollIntoLoyaltyProgram');
             }
-            // verify required parameter 'value' is set
-            if (!value) {
-                throw new Error('Missing required parameter value when calling enrollIntoLoyaltyProgram');
-            }
             let httpRequestParams: any = {
                 method: 'POST',
                 url: localVarPath,
                 json: true,
-                data: value,
-                                params: queryParameters,
+                                                params: queryParameters,
                 headers: headerParams
             };
 

@@ -15,10 +15,6 @@ namespace HostMe.Sdk {
         "status"?: string;
 
         "restaurant"?: RestaurantInfo;
-
-        "isMember"?: boolean;
-
-        "profile"?: UserProfile;
     }
 
 }
