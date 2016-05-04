@@ -253,7 +253,7 @@ var HostMe;
             function MobileCoreApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
+                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -843,7 +843,7 @@ var HostMe;
             function MobileLoyaltyApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
+                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -1113,7 +1113,7 @@ var HostMe;
             function MobileReservationsApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
+                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -1341,7 +1341,7 @@ var HostMe;
             function MobileWaitingManagementApi($http, $httpParamSerializer, basePath) {
                 this.$http = $http;
                 this.$httpParamSerializer = $httpParamSerializer;
-                this.basePath = 'http://hostme-services-tables.azurewebsites.net';
+                this.basePath = 'http://hostme-services-dev.azurewebsites.net';
                 this.defaultHeaders = {};
                 if (basePath) {
                     this.basePath = basePath;
@@ -2026,6 +2026,13 @@ var HostMe;
             })(OrderByClause.DirectionEnum || (OrderByClause.DirectionEnum = {}));
             var DirectionEnum = OrderByClause.DirectionEnum;
         })(OrderByClause = Sdk.OrderByClause || (Sdk.OrderByClause = {}));
+    })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
+})(HostMe || (HostMe = {}));
+var HostMe;
+(function (HostMe) {
+    var Sdk;
+    (function (Sdk) {
+        'use strict';
     })(Sdk = HostMe.Sdk || (HostMe.Sdk = {}));
 })(HostMe || (HostMe = {}));
 var HostMe;
