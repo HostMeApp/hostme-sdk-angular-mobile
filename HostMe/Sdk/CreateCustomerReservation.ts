@@ -21,6 +21,10 @@ namespace HostMe.Sdk {
         "highChair"?: boolean;
 
         "stroller"?: boolean;
+
+        "customerProfile"?: Profile;
+
+        "party"?: boolean;
     }
 
 }

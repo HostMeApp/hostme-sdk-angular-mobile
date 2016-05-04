@@ -27,6 +27,7 @@
 /// <reference path="OnlineAvailability.ts" />
 /// <reference path="OrderByClause.ts" />
 /// <reference path="PhoneConfirmation.ts" />
+/// <reference path="Profile.ts" />
 /// <reference path="PutInLine.ts" />
 /// <reference path="RangeVariable.ts" />
 /// <reference path="RedeemRequestInfo.ts" />
