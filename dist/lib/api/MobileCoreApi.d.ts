@@ -24,7 +24,6 @@ export declare class MobileCoreApi {
     getReservationAvailability(restaurantId: number, date: Date, partySize: number, rangeInMinutes: number, areas?: string, extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.OnlineAvailability>>;
     getRestaurantById(id: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.RestaurantInfo>;
     getUserProfile(extraHttpRequestParams?: any): ng.IHttpPromise<models.UserProfile>;
-    logout(extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     postProfileImage(image: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     profileImage(extraHttpRequestParams?: any): ng.IHttpPromise<string>;
     register(model: models.RegisterUser, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
