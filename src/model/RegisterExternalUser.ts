@@ -8,5 +8,7 @@ export interface RegisterExternalUser {
     fullName?: string;
 
     phoneNumber?: string;
+
+    externalAccessToken?: string;
 }
 
