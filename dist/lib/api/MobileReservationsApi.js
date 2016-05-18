@@ -2,18 +2,15 @@
 var auth = require('./auth');
 'use strict';
 var MobileReservationsApi = (function () {
-    function MobileReservationsApi($http, $httpParamSerializer, basePath) {
+    function MobileReservationsApi($http, config, $httpParamSerializer) {
         this.$http = $http;
+        this.config = config;
         this.$httpParamSerializer = $httpParamSerializer;
-        this.basePath = 'http://hostme-services-dev.azurewebsites.net';
         this.defaultHeaders = {};
         this.authentications = {
             'default': new auth.VoidAuth(),
             'oauth2': new auth.OAuth(),
         };
-        if (basePath) {
-            this.basePath = basePath;
-        }
     }
     Object.defineProperty(MobileReservationsApi.prototype, "accessToken", {
         set: function (token) {
@@ -31,7 +28,7 @@ var MobileReservationsApi = (function () {
         return objA;
     };
     MobileReservationsApi.prototype.addNewReservation = function (value, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations';
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!value) {
@@ -53,7 +50,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.closeAsCanceled = function (reservationId, cancelReservationContract, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/cancel'
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations/{reservationId}/cancel'
             .replace('{' + 'reservationId' + '}', String(reservationId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -79,7 +76,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.getReservationById = function (reservationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}'
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations/{reservationId}'
             .replace('{' + 'reservationId' + '}', String(reservationId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -101,7 +98,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.getUserReservations = function (queryOptions, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations';
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (queryOptions !== undefined) {
@@ -122,7 +119,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.readAllMessage = function (reservationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/messages/readall'
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations/{reservationId}/messages/readall'
             .replace('{' + 'reservationId' + '}', String(reservationId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -144,7 +141,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.sendMessageToReservation = function (reservationId, createMessageContract, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}/messages'
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations/{reservationId}/messages'
             .replace('{' + 'reservationId' + '}', String(reservationId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -170,7 +167,7 @@ var MobileReservationsApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileReservationsApi.prototype.updateReservation = function (reservationId, value, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/rsv/mb/reservations/{reservationId}'
+        var localVarPath = this.config.basePath + '/api/rsv/mb/reservations/{reservationId}'
             .replace('{' + 'reservationId' + '}', String(reservationId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -195,7 +192,7 @@ var MobileReservationsApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileReservationsApi.$inject = ['$http', '$httpParamSerializer'];
+    MobileReservationsApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileReservationsApi;
 }());
 exports.MobileReservationsApi = MobileReservationsApi;

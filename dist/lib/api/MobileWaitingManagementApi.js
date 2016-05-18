@@ -2,18 +2,15 @@
 var auth = require('./auth');
 'use strict';
 var MobileWaitingManagementApi = (function () {
-    function MobileWaitingManagementApi($http, $httpParamSerializer, basePath) {
+    function MobileWaitingManagementApi($http, config, $httpParamSerializer) {
         this.$http = $http;
+        this.config = config;
         this.$httpParamSerializer = $httpParamSerializer;
-        this.basePath = 'http://hostme-services-dev.azurewebsites.net';
         this.defaultHeaders = {};
         this.authentications = {
             'default': new auth.VoidAuth(),
             'oauth2': new auth.OAuth(),
         };
-        if (basePath) {
-            this.basePath = basePath;
-        }
     }
     Object.defineProperty(MobileWaitingManagementApi.prototype, "accessToken", {
         set: function (token) {
@@ -31,7 +28,7 @@ var MobileWaitingManagementApi = (function () {
         return objA;
     };
     MobileWaitingManagementApi.prototype.checkInWithWaiting = function (waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/checkin'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/checkin'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -53,7 +50,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.close = function (waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/close'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/close'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -75,7 +72,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.confirmWithApp = function (confirmationCode, conf, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
             .replace('{' + 'confirmationCode' + '}', String(confirmationCode));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -101,7 +98,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.getInLine = function (value, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings';
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!value) {
@@ -123,7 +120,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.getUserCurrentWaiting = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings';
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -141,7 +138,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.leaveTheLine = function (waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/cancel'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/cancel'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -163,7 +160,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.markAllMessagesAsRead = function (waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/messages/readall'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/messages/readall'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -185,7 +182,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.putOnHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -213,7 +210,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.sendMessageToWaiting = function (waitingItemId, createMessage, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -239,7 +236,7 @@ var MobileWaitingManagementApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileWaitingManagementApi.prototype.takeOffHold = function (restaurantId, waitingItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
+        var localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -266,7 +263,7 @@ var MobileWaitingManagementApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileWaitingManagementApi.$inject = ['$http', '$httpParamSerializer'];
+    MobileWaitingManagementApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileWaitingManagementApi;
 }());
 exports.MobileWaitingManagementApi = MobileWaitingManagementApi;

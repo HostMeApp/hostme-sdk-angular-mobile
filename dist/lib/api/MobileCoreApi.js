@@ -2,18 +2,15 @@
 var auth = require('./auth');
 'use strict';
 var MobileCoreApi = (function () {
-    function MobileCoreApi($http, $httpParamSerializer, basePath) {
+    function MobileCoreApi($http, config, $httpParamSerializer) {
         this.$http = $http;
+        this.config = config;
         this.$httpParamSerializer = $httpParamSerializer;
-        this.basePath = 'http://hostme-services-dev.azurewebsites.net';
         this.defaultHeaders = {};
         this.authentications = {
             'default': new auth.VoidAuth(),
             'oauth2': new auth.OAuth(),
         };
-        if (basePath) {
-            this.basePath = basePath;
-        }
     }
     Object.defineProperty(MobileCoreApi.prototype, "accessToken", {
         set: function (token) {
@@ -31,7 +28,7 @@ var MobileCoreApi = (function () {
         return objA;
     };
     MobileCoreApi.prototype.addExternalLogin = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/addExternalLogin';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/addExternalLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -53,7 +50,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.changePassword = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/changePassword';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/changePassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -75,7 +72,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.checkIn = function (checkinContract, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/restaurant/checkin';
+        var localVarPath = this.config.basePath + '/api/core/mb/restaurant/checkin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!checkinContract) {
@@ -97,7 +94,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.findRestaurants = function (lat, lon, name, city, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/restaurants/find';
+        var localVarPath = this.config.basePath + '/api/core/mb/restaurants/find';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (lat !== undefined) {
@@ -127,7 +124,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getAllRestaurants = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/restaurants';
+        var localVarPath = this.config.basePath + '/api/core/mb/restaurants';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -145,7 +142,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getListOfLocations = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/locations';
+        var localVarPath = this.config.basePath + '/api/core/mb/locations';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -163,7 +160,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getManageInfo = function (returnUrl, generateState, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/manageInfo';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/manageInfo';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!returnUrl) {
@@ -190,7 +187,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getRegistrationToken = function (token, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/campaign/{token}'
+        var localVarPath = this.config.basePath + '/api/core/mb/campaign/{token}'
             .replace('{' + 'token' + '}', String(token));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -212,7 +209,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getReservationAvailability = function (restaurantId, date, partySize, rangeInMinutes, areas, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/restaurants/{restaurantId}/availability'
+        var localVarPath = this.config.basePath + '/api/core/mb/restaurants/{restaurantId}/availability'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -255,7 +252,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getRestaurantById = function (id, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/restaurants/{id}'
+        var localVarPath = this.config.basePath + '/api/core/mb/restaurants/{id}'
             .replace('{' + 'id' + '}', String(id));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -277,7 +274,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.getUserProfile = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/profile';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/profile';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -295,7 +292,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.postProfileImage = function (image, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/profile/image';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/profile/image';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!image) {
@@ -317,7 +314,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.profileImage = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/profile/image';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/profile/image';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -335,7 +332,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.register = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/register';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/register';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -357,7 +354,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.registerExternal = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/registerExternal';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/registerExternal';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -379,7 +376,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.removeLogin = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/removeLogin';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/removeLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -401,7 +398,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.resetPassword = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/resetPassword';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/resetPassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -423,7 +420,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.setPassword = function (model, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/setPassword';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/setPassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!model) {
@@ -445,7 +442,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.setPushChannelAsync = function (channel, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/setPushChannel';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/setPushChannel';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!channel) {
@@ -467,7 +464,7 @@ var MobileCoreApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileCoreApi.prototype.updateUserProfile = function (profile, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/core/mb/account/profile';
+        var localVarPath = this.config.basePath + '/api/core/mb/account/profile';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         if (!profile) {
@@ -488,7 +485,7 @@ var MobileCoreApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileCoreApi.$inject = ['$http', '$httpParamSerializer'];
+    MobileCoreApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileCoreApi;
 }());
 exports.MobileCoreApi = MobileCoreApi;
