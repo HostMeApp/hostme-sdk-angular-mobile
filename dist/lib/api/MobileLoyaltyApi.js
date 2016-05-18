@@ -2,18 +2,15 @@
 var auth = require('./auth');
 'use strict';
 var MobileLoyaltyApi = (function () {
-    function MobileLoyaltyApi($http, $httpParamSerializer, basePath) {
+    function MobileLoyaltyApi($http, config, $httpParamSerializer) {
         this.$http = $http;
+        this.config = config;
         this.$httpParamSerializer = $httpParamSerializer;
-        this.basePath = 'http://hostme-services-dev.azurewebsites.net';
         this.defaultHeaders = {};
         this.authentications = {
             'default': new auth.VoidAuth(),
             'oauth2': new auth.OAuth(),
         };
-        if (basePath) {
-            this.basePath = basePath;
-        }
     }
     Object.defineProperty(MobileLoyaltyApi.prototype, "accessToken", {
         set: function (token) {
@@ -31,7 +28,7 @@ var MobileLoyaltyApi = (function () {
         return objA;
     };
     MobileLoyaltyApi.prototype.cancelMembershipAtRestaurant = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -53,7 +50,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.enrollIntoLoyaltyProgram = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -75,7 +72,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getAllUserMemberships = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership';
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
         var httpRequestParams = {
@@ -93,7 +90,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getCustomerRedeemRequests = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -115,7 +112,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getMemberRewardOptions = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -137,7 +134,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getMemberTransactions = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/transactions'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/transactions'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -159,7 +156,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getMembershipByRestaurantId = function (restaurantId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
@@ -181,7 +178,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.getRedeemRequestInfo = function (restaurantId, redeemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems/{redeemId}'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems/{redeemId}'
             .replace('{' + 'restaurantId' + '}', String(restaurantId))
             .replace('{' + 'redeemId' + '}', String(redeemId));
         var queryParameters = {};
@@ -207,7 +204,7 @@ var MobileLoyaltyApi = (function () {
         return this.$http(httpRequestParams);
     };
     MobileLoyaltyApi.prototype.submitRequestForRedeem = function (restaurantId, rewardId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards/{rewardId}/redeem'
+        var localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards/{rewardId}/redeem'
             .replace('{' + 'restaurantId' + '}', String(restaurantId))
             .replace('{' + 'rewardId' + '}', String(rewardId));
         var queryParameters = {};
@@ -232,7 +229,7 @@ var MobileLoyaltyApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileLoyaltyApi.$inject = ['$http', '$httpParamSerializer'];
+    MobileLoyaltyApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileLoyaltyApi;
 }());
 exports.MobileLoyaltyApi = MobileLoyaltyApi;

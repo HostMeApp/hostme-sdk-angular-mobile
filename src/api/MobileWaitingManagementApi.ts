@@ -1,19 +1,17 @@
 /* tslint:disable:no-unused-variable member-ordering */
 import * as models from '../model/models';
 import * as auth from './auth';
+import {IApiConfig} from '../client/IApiConfig';
 
 'use strict';
                                  	
     export class MobileWaitingManagementApi {
-        protected basePath = 'http://hostme-services-dev.azurewebsites.net';
         public defaultHeaders : any = {};
 
-        static $inject: string[] = ['$http', '$httpParamSerializer'];
+        static $inject: string[] = ['$http','IApiConfig', '$httpParamSerializer'];
 
-        constructor(protected $http: ng.IHttpService, protected $httpParamSerializer?: (d: any) => any, basePath?: string) {
-            if (basePath) {
-                this.basePath = basePath;
-            }
+        constructor(protected $http: ng.IHttpService, protected config: IApiConfig, protected $httpParamSerializer?: (d: any) => any) {
+           
         }
         
         public authentications = {
@@ -41,7 +39,7 @@ import * as auth from './auth';
          * @param waitingItemId 
          */
         public checkInWithWaiting (waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Transaction> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/checkin'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/checkin'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -73,7 +71,7 @@ import * as auth from './auth';
          * @param waitingItemId Identifier of the waiting item
          */
         public close (waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/close'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/close'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -106,7 +104,7 @@ import * as auth from './auth';
          * @param conf Conformation model
          */
         public confirmWithApp (confirmationCode: number, conf: models.PhoneConfirmation, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/confirm/{confirmationCode}'
                 .replace('{' + 'confirmationCode' + '}', String(confirmationCode));
 
             let queryParameters: any = {};
@@ -143,7 +141,7 @@ import * as auth from './auth';
          * @param value 
          */
         public getInLine (value: models.PutInLine, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.WaitingItem> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings';
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -174,7 +172,7 @@ import * as auth from './auth';
          * 
          */
         public getUserCurrentWaiting (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.WaitingItem> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings';
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -201,7 +199,7 @@ import * as auth from './auth';
          * @param waitingItemId Waiting item identifier
          */
         public leaveTheLine (waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/cancel'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/cancel'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -233,7 +231,7 @@ import * as auth from './auth';
          * @param waitingItemId Waiting item identifier
          */
         public markAllMessagesAsRead (waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/messages/readall'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/messages/readall'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -266,7 +264,7 @@ import * as auth from './auth';
          * @param waitingItemId Waiting item identifier
          */
         public putOnHold (restaurantId: number, waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/putonhold'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -307,7 +305,7 @@ import * as auth from './auth';
          * @param createMessage The body of the message
          */
         public sendMessageToWaiting (waitingItemId: number, createMessage: models.CreateMessage, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/sendmessage'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};
@@ -345,7 +343,7 @@ import * as auth from './auth';
          * @param waitingItemId Waiting item identifier
          */
         public takeOffHold (restaurantId: number, waitingItemId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
+            const localVarPath = this.config.basePath + '/api/wm/mb/waitings/{waitingItemId}/takeoffhold'
                 .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
 
             let queryParameters: any = {};

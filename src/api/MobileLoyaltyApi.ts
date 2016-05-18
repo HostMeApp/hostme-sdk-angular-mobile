@@ -1,19 +1,17 @@
 /* tslint:disable:no-unused-variable member-ordering */
 import * as models from '../model/models';
 import * as auth from './auth';
+import {IApiConfig} from '../client/IApiConfig';
 
 'use strict';
                                  	
     export class MobileLoyaltyApi {
-        protected basePath = 'http://hostme-services-dev.azurewebsites.net';
         public defaultHeaders : any = {};
 
-        static $inject: string[] = ['$http', '$httpParamSerializer'];
+        static $inject: string[] = ['$http','IApiConfig', '$httpParamSerializer'];
 
-        constructor(protected $http: ng.IHttpService, protected $httpParamSerializer?: (d: any) => any, basePath?: string) {
-            if (basePath) {
-                this.basePath = basePath;
-            }
+        constructor(protected $http: ng.IHttpService, protected config: IApiConfig, protected $httpParamSerializer?: (d: any) => any) {
+           
         }
         
         public authentications = {
@@ -41,7 +39,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public cancelMembershipAtRestaurant (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -73,7 +71,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public enrollIntoLoyaltyProgram (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Membership> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -104,7 +102,7 @@ import * as auth from './auth';
          * 
          */
         public getAllUserMemberships (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.Membership>> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership';
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -131,7 +129,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public getCustomerRedeemRequests (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.RedeemRequestInfo>> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -163,7 +161,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public getMemberRewardOptions (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.RewardInfo>> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -195,7 +193,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public getMemberTransactions (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.Transaction>> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/transactions'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/transactions'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -227,7 +225,7 @@ import * as auth from './auth';
          * @param restaurantId 
          */
         public getMembershipByRestaurantId (restaurantId: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Membership> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -260,7 +258,7 @@ import * as auth from './auth';
          * @param redeemId 
          */
         public getRedeemRequestInfo (restaurantId: number, redeemId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RedeemRequestInfo> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems/{redeemId}'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/redeems/{redeemId}'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId))
                 .replace('{' + 'redeemId' + '}', String(redeemId));
 
@@ -298,7 +296,7 @@ import * as auth from './auth';
          * @param rewardId 
          */
         public submitRequestForRedeem (restaurantId: number, rewardId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RedeemRequestInfo> {
-            const localVarPath = this.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards/{rewardId}/redeem'
+            const localVarPath = this.config.basePath + '/api/loyalty/mb/membership/{restaurantId}/rewards/{rewardId}/redeem'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId))
                 .replace('{' + 'rewardId' + '}', String(rewardId));
 
