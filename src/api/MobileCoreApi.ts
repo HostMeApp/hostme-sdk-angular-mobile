@@ -1,19 +1,17 @@
 /* tslint:disable:no-unused-variable member-ordering */
 import * as models from '../model/models';
 import * as auth from './auth';
+import {IApiConfig} from '../client/IApiConfig';
 
 'use strict';
                                  	
     export class MobileCoreApi {
-        protected basePath = 'http://hostme-services-dev.azurewebsites.net';
         public defaultHeaders : any = {};
 
-        static $inject: string[] = ['$http', '$httpParamSerializer'];
+        static $inject: string[] = ['$http','IApiConfig', '$httpParamSerializer'];
 
-        constructor(protected $http: ng.IHttpService, protected $httpParamSerializer?: (d: any) => any, basePath?: string) {
-            if (basePath) {
-                this.basePath = basePath;
-            }
+        constructor(protected $http: ng.IHttpService, protected config: IApiConfig, protected $httpParamSerializer?: (d: any) => any) {
+           
         }
         
         public authentications = {
@@ -41,7 +39,7 @@ import * as auth from './auth';
          * @param model 
          */
         public addExternalLogin (model: models.AddExternalLogin, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/addExternalLogin';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/addExternalLogin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -73,7 +71,7 @@ import * as auth from './auth';
          * @param model 
          */
         public changePassword (model: models.ChangePassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/changePassword';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/changePassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -105,7 +103,7 @@ import * as auth from './auth';
          * @param checkinContract 
          */
         public checkIn (checkinContract: models.TransactionCheckin, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Transaction> {
-            const localVarPath = this.basePath + '/api/core/mb/restaurant/checkin';
+            const localVarPath = this.config.basePath + '/api/core/mb/restaurant/checkin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -140,7 +138,7 @@ import * as auth from './auth';
          * @param city 
          */
         public findRestaurants (lat?: number, lon?: number, name?: string, city?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.RestaurantInfo>> {
-            const localVarPath = this.basePath + '/api/core/mb/restaurants/find';
+            const localVarPath = this.config.basePath + '/api/core/mb/restaurants/find';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -182,7 +180,7 @@ import * as auth from './auth';
          * 
          */
         public getAllRestaurants (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.RestaurantInfo>> {
-            const localVarPath = this.basePath + '/api/core/mb/restaurants';
+            const localVarPath = this.config.basePath + '/api/core/mb/restaurants';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -208,7 +206,7 @@ import * as auth from './auth';
          * 
          */
         public getListOfLocations (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.Location>> {
-            const localVarPath = this.basePath + '/api/core/mb/locations';
+            const localVarPath = this.config.basePath + '/api/core/mb/locations';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -236,7 +234,7 @@ import * as auth from './auth';
          * @param generateState 
          */
         public getManageInfo (returnUrl: string, generateState?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ManageInfo> {
-            const localVarPath = this.basePath + '/api/core/mb/account/manageInfo';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/manageInfo';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -275,7 +273,7 @@ import * as auth from './auth';
          * @param token 
          */
         public getRegistrationToken (token: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CampaignInfo> {
-            const localVarPath = this.basePath + '/api/core/mb/campaign/{token}'
+            const localVarPath = this.config.basePath + '/api/core/mb/campaign/{token}'
                 .replace('{' + 'token' + '}', String(token));
 
             let queryParameters: any = {};
@@ -311,7 +309,7 @@ import * as auth from './auth';
          * @param areas 
          */
         public getReservationAvailability (restaurantId: number, date: Date, partySize: number, rangeInMinutes: number, areas?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.OnlineAvailability>> {
-            const localVarPath = this.basePath + '/api/core/mb/restaurants/{restaurantId}/availability'
+            const localVarPath = this.config.basePath + '/api/core/mb/restaurants/{restaurantId}/availability'
                 .replace('{' + 'restaurantId' + '}', String(restaurantId));
 
             let queryParameters: any = {};
@@ -371,7 +369,7 @@ import * as auth from './auth';
          * @param id 
          */
         public getRestaurantById (id: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RestaurantInfo> {
-            const localVarPath = this.basePath + '/api/core/mb/restaurants/{id}'
+            const localVarPath = this.config.basePath + '/api/core/mb/restaurants/{id}'
                 .replace('{' + 'id' + '}', String(id));
 
             let queryParameters: any = {};
@@ -402,7 +400,7 @@ import * as auth from './auth';
          * 
          */
         public getUserProfile (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserProfile> {
-            const localVarPath = this.basePath + '/api/core/mb/account/profile';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/profile';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -429,7 +427,7 @@ import * as auth from './auth';
          * @param image 
          */
         public postProfileImage (image: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/profile/image';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/profile/image';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -460,7 +458,7 @@ import * as auth from './auth';
          * 
          */
         public profileImage (extraHttpRequestParams?: any ) : ng.IHttpPromise<string> {
-            const localVarPath = this.basePath + '/api/core/mb/account/profile/image';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/profile/image';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -487,7 +485,7 @@ import * as auth from './auth';
          * @param model 
          */
         public register (model: models.RegisterUser, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/register';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/register';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -519,7 +517,7 @@ import * as auth from './auth';
          * @param model 
          */
         public registerExternal (model: models.RegisterExternalUser, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/registerExternal';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/registerExternal';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -551,7 +549,7 @@ import * as auth from './auth';
          * @param model 
          */
         public removeLogin (model: models.RemoveLogin, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/removeLogin';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/removeLogin';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -583,7 +581,7 @@ import * as auth from './auth';
          * @param model 
          */
         public resetPassword (model: models.ResetPassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/resetPassword';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/resetPassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -615,7 +613,7 @@ import * as auth from './auth';
          * @param model 
          */
         public setPassword (model: models.SetPassword, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/setPassword';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/setPassword';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -647,7 +645,7 @@ import * as auth from './auth';
          * @param channel 
          */
         public setPushChannelAsync (channel: models.SetPushChannel, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/setPushChannel';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/setPushChannel';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
@@ -679,7 +677,7 @@ import * as auth from './auth';
          * @param profile 
          */
         public updateUserProfile (profile: models.UserProfile, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-            const localVarPath = this.basePath + '/api/core/mb/account/profile';
+            const localVarPath = this.config.basePath + '/api/core/mb/account/profile';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
