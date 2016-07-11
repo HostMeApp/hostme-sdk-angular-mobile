@@ -54,7 +54,5 @@ export interface RestaurantInfo {
     allowManualHold?: boolean;
 
     currentLineStats?: models.WaitingStats;
-
-    reservationIncomeEmail?: string;
 }
 
