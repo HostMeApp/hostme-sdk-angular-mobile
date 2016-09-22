@@ -273,6 +273,24 @@ var MobileCoreApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
+    MobileCoreApi.prototype.getUserInfo = function (extraHttpRequestParams) {
+        var localVarPath = this.config.basePath + '/api/core/mb/account/userInfo';
+        var queryParameters = {};
+        var headerParams = this.extendObj({}, this.defaultHeaders);
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            json: true,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+        }
+        this.authentications.oauth2.applyToRequest(httpRequestParams);
+        this.authentications.default.applyToRequest(httpRequestParams);
+        return this.$http(httpRequestParams);
+    };
     MobileCoreApi.prototype.getUserProfile = function (extraHttpRequestParams) {
         var localVarPath = this.config.basePath + '/api/core/mb/account/profile';
         var queryParameters = {};

@@ -1,6 +1,6 @@
 export interface PutInLine {
     restaurantId?: number;
-    reservationTime?: Date;
+    reservationTime?: string;
     customerName?: string;
     groupSize?: number;
     notificationUrl?: string;

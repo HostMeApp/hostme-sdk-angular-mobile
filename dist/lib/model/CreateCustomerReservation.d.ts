@@ -1,7 +1,7 @@
 import * as models from './models';
 export interface CreateCustomerReservation {
     restaurantId?: number;
-    reservationTime?: Date;
+    reservationTime?: string;
     groupSize?: number;
     notificationUrl?: string;
     deviceType?: string;
