@@ -9,10 +9,12 @@ export interface Membership {
 
     points?: number;
 
-    joinDate?: Date;
+    joinDate?: string;
 
     status?: string;
 
     restaurant?: models.RestaurantInfo;
+
+    isMember?: boolean;
 }
 

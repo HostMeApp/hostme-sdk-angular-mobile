@@ -5,7 +5,7 @@ export interface CreateCustomerReservation {
 
     restaurantId?: number;
 
-    reservationTime?: Date;
+    reservationTime?: string;
 
     groupSize?: number;
 

@@ -399,6 +399,32 @@ import {IApiConfig} from '../client/IApiConfig';
          * 
          * 
          */
+        public getUserInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserExternal> {
+            const localVarPath = this.config.basePath + '/api/core/mb/account/userInfo';
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            let httpRequestParams: any = {
+                method: 'GET',
+                url: localVarPath,
+                json: true,
+                                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+                this.authentications.oauth2.applyToRequest(httpRequestParams);
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         */
         public getUserProfile (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserProfile> {
             const localVarPath = this.config.basePath + '/api/core/mb/account/profile';
 

@@ -3,7 +3,7 @@ import * as models from './models';
 
 export interface UpdateReservation {
 
-    reservationTime?: Date;
+    reservationTime?: string;
 
     groupSize?: number;
 

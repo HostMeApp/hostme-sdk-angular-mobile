@@ -5,7 +5,7 @@ export interface PutInLine {
 
     restaurantId?: number;
 
-    reservationTime?: Date;
+    reservationTime?: string;
 
     customerName?: string;
 
