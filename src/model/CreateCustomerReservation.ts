@@ -24,5 +24,11 @@ export interface CreateCustomerReservation {
     customerProfile?: models.Profile;
 
     party?: boolean;
+
+    email?: string;
+
+    fullName?: string;
+
+    phoneNumber?: string;
 }
 
