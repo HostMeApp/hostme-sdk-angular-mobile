@@ -11,4 +11,7 @@ export interface CreateCustomerReservation {
     stroller?: boolean;
     customerProfile?: models.Profile;
     party?: boolean;
+    email?: string;
+    fullName?: string;
+    phoneNumber?: string;
 }
