@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface SelectExpandClause {
+        "selectedItems"?: Array<models.SelectItem>;
 
-    selectedItems?: Array<models.SelectItem>;
+        "allSelected"?: boolean;
 
-    allSelected?: boolean;
 }
 

@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface PhoneConfirmation {
+        "deviceType": string;
 
-    deviceType?: string;
+        "customerName": string;
 
-    customerName?: string;
+        "notificationUrl": string;
 
-    notificationUrl?: string;
 }
 

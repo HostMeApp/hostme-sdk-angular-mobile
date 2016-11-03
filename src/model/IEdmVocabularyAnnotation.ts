@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface IEdmVocabularyAnnotation {
+        "qualifier"?: string;
 
-    qualifier?: string;
+        "term"?: models.IEdmTerm;
 
-    term?: models.IEdmTerm;
+        "target"?: models.IEdmVocabularyAnnotatable;
 
-    target?: models.IEdmVocabularyAnnotatable;
 }
 

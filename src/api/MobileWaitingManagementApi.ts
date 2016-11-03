@@ -44,9 +44,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling checkInWithWaiting');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling checkInWithWaiting.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
@@ -76,9 +76,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling close');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling close.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
@@ -109,13 +109,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'confirmationCode' is set
-            if (!confirmationCode) {
-                throw new Error('Missing required parameter confirmationCode when calling confirmWithApp');
+            // verify required parameter 'confirmationCode' is not null or undefined
+            if (confirmationCode === null || confirmationCode === undefined) {
+                throw new Error('Required parameter confirmationCode was null or undefined when calling confirmWithApp.');
             }
-            // verify required parameter 'conf' is set
-            if (!conf) {
-                throw new Error('Missing required parameter conf when calling confirmWithApp');
+            // verify required parameter 'conf' is not null or undefined
+            if (conf === null || conf === undefined) {
+                throw new Error('Required parameter conf was null or undefined when calling confirmWithApp.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -145,9 +145,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'value' is set
-            if (!value) {
-                throw new Error('Missing required parameter value when calling getInLine');
+            // verify required parameter 'value' is not null or undefined
+            if (value === null || value === undefined) {
+                throw new Error('Required parameter value was null or undefined when calling getInLine.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -204,9 +204,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling leaveTheLine');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling leaveTheLine.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
@@ -236,9 +236,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling markAllMessagesAsRead');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling markAllMessagesAsRead.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -269,13 +269,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling putOnHold');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling putOnHold.');
             }
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling putOnHold');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling putOnHold.');
             }
             if (restaurantId !== undefined) {
                 queryParameters['restaurantId'] = restaurantId;
@@ -310,13 +310,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling sendMessageToWaiting');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling sendMessageToWaiting.');
             }
-            // verify required parameter 'createMessage' is set
-            if (!createMessage) {
-                throw new Error('Missing required parameter createMessage when calling sendMessageToWaiting');
+            // verify required parameter 'createMessage' is not null or undefined
+            if (createMessage === null || createMessage === undefined) {
+                throw new Error('Required parameter createMessage was null or undefined when calling sendMessageToWaiting.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -348,13 +348,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling takeOffHold');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling takeOffHold.');
             }
-            // verify required parameter 'waitingItemId' is set
-            if (!waitingItemId) {
-                throw new Error('Missing required parameter waitingItemId when calling takeOffHold');
+            // verify required parameter 'waitingItemId' is not null or undefined
+            if (waitingItemId === null || waitingItemId === undefined) {
+                throw new Error('Required parameter waitingItemId was null or undefined when calling takeOffHold.');
             }
             if (restaurantId !== undefined) {
                 queryParameters['restaurantId'] = restaurantId;

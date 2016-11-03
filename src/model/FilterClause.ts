@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface FilterClause {
+        "expression"?: models.SingleValueNode;
 
-    expression?: models.SingleValueNode;
+        "rangeVariable"?: models.RangeVariable;
 
-    rangeVariable?: models.RangeVariable;
+        "itemType"?: models.IEdmTypeReference;
 
-    itemType?: models.IEdmTypeReference;
 }
 

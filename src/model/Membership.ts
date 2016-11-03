@@ -2,19 +2,19 @@
 import * as models from './models';
 
 export interface Membership {
+        "id"?: number;
 
-    id?: number;
+        "membershipLevel"?: string;
 
-    membershipLevel?: string;
+        "points"?: number;
 
-    points?: number;
+        "joinDate"?: Date;
 
-    joinDate?: string;
+        "status"?: string;
 
-    status?: string;
+        "restaurant"?: models.RestaurantInfo;
 
-    restaurant?: models.RestaurantInfo;
+        "isMember"?: boolean;
 
-    isMember?: boolean;
 }
 

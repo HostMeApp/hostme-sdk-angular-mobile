@@ -2,15 +2,15 @@
 import * as models from './models';
 
 export interface UserProfile {
+        "email"?: string;
 
-    email?: string;
+        "fullName": string;
 
-    fullName?: string;
+        "phoneNumber": string;
 
-    phoneNumber?: string;
+        "gender"?: string;
 
-    gender?: string;
+        "dob"?: Date;
 
-    dob?: string;
 }
 

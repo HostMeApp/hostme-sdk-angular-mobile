@@ -2,7 +2,7 @@
 import * as models from './models';
 
 export interface WaitingStats {
+        "waitByGroup"?: Array<models.WaitingStatLine>;
 
-    waitByGroup?: Array<models.WaitingStatLine>;
 }
 

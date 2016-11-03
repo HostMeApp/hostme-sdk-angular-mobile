@@ -2,17 +2,17 @@
 import * as models from './models';
 
 export interface RewardInfo {
+        "description"?: string;
 
-    description?: string;
+        "id"?: string;
 
-    id?: string;
+        "imageUrl"?: string;
 
-    imageUrl?: string;
+        "priceInPoints"?: number;
 
-    priceInPoints?: number;
+        "redeemRequest"?: models.RedeemRequestInfo;
 
-    redeemRequest?: models.RedeemRequestInfo;
+        "value"?: models.RewardValue;
 
-    value?: models.RewardValue;
 }
 

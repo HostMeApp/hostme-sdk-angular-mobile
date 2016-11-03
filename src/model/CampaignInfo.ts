@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface CampaignInfo {
+        "restaurantId"?: number;
 
-    restaurantId?: number;
+        "tableNumber"?: string;
 
-    tableNumber?: string;
 }
 

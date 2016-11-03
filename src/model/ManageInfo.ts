@@ -2,13 +2,13 @@
 import * as models from './models';
 
 export interface ManageInfo {
+        "localLoginProvider"?: string;
 
-    localLoginProvider?: string;
+        "userName"?: string;
 
-    userName?: string;
+        "logins"?: Array<models.UserLoginInfo>;
 
-    logins?: Array<models.UserLoginInfo>;
+        "externalLoginProviders"?: Array<models.ExternalLogin>;
 
-    externalLoginProviders?: Array<models.ExternalLogin>;
 }
 

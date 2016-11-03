@@ -2,21 +2,21 @@
 import * as models from './models';
 
 export interface Transaction {
+        "id"?: number;
 
-    id?: number;
+        "time"?: Date;
 
-    time?: string;
+        "type"?: string;
 
-    type?: string;
+        "points"?: number;
 
-    points?: number;
+        "note"?: string;
 
-    note?: string;
+        "units"?: number;
 
-    units?: number;
+        "status"?: string;
 
-    status?: string;
+        "statusReason"?: string;
 
-    statusReason?: string;
 }
 

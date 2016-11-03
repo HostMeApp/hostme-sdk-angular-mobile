@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface RangeVariable {
+        "name"?: string;
 
-    name?: string;
+        "typeReference"?: models.IEdmTypeReference;
 
-    typeReference?: models.IEdmTypeReference;
+        "kind"?: number;
 
-    kind?: number;
 }
 

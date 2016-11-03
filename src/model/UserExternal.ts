@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface UserExternal {
+        "userName"?: string;
 
-    userName?: string;
+        "hasRegistered"?: boolean;
 
-    hasRegistered?: boolean;
+        "loginProvider"?: string;
 
-    loginProvider?: string;
 }
 

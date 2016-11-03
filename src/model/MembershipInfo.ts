@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface MembershipInfo {
+        "id"?: number;
 
-    id?: number;
+        "membershipLevel"?: string;
 
-    membershipLevel?: string;
+        "points"?: number;
 
-    points?: number;
 }
 

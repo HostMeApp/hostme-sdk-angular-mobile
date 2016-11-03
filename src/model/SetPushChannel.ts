@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface SetPushChannel {
+        "notificationUrl": string;
 
-    notificationUrl?: string;
+        "deviceType": string;
 
-    deviceType?: string;
 }
 

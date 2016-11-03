@@ -2,21 +2,20 @@
 import * as models from './models';
 
 export interface RedeemRequestInfo {
+        "id"?: string;
 
-    id?: string;
+        "status"?: RedeemRequestInfo.StatusEnum;
 
-    status?: RedeemRequestInfo.StatusEnum;
+        "statusComment"?: string;
 
-    statusComment?: string;
+        "tableNumber"?: string;
 
-    tableNumber?: string;
 }
 
 export namespace RedeemRequestInfo {
-
-    export enum StatusEnum { 
-        Submited = <any> 'Submited',
-        Approved = <any> 'Approved',
-        Rejected = <any> 'Rejected',
-    }
+        export enum StatusEnum {
+            Submited = <any> 'Submited',
+            Approved = <any> 'Approved',
+            Rejected = <any> 'Rejected'
+        }
 }

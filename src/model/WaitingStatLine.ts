@@ -2,13 +2,13 @@
 import * as models from './models';
 
 export interface WaitingStatLine {
+        "area"?: string;
 
-    area?: string;
+        "avgCallTime"?: number;
 
-    avgCallTime?: number;
+        "avgSeatTime"?: number;
 
-    avgSeatTime?: number;
+        "topSize"?: number;
 
-    topSize?: number;
 }
 

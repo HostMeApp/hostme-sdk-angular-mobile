@@ -2,24 +2,23 @@
 import * as models from './models';
 
 export interface OnlineAvailability {
+        "acceptReservations"?: boolean;
 
-    acceptReservations?: boolean;
+        "availabilityLevel"?: OnlineAvailability.AvailabilityLevelEnum;
 
-    availabilityLevel?: OnlineAvailability.AvailabilityLevelEnum;
+        "open"?: boolean;
 
-    open?: boolean;
+        "requestedTime"?: boolean;
 
-    requestedTime?: boolean;
+        "time"?: string;
 
-    time?: string;
 }
 
 export namespace OnlineAvailability {
-
-    export enum AvailabilityLevelEnum { 
-        Available = <any> 'Available',
-        AvailableForWait = <any> 'AvailableForWait',
-        NotEnoughCovers = <any> 'NotEnoughCovers',
-        Overbooked = <any> 'Overbooked',
-    }
+        export enum AvailabilityLevelEnum {
+            Available = <any> 'Available',
+            AvailableForWait = <any> 'AvailableForWait',
+            NotEnoughCovers = <any> 'NotEnoughCovers',
+            Overbooked = <any> 'Overbooked'
+        }
 }

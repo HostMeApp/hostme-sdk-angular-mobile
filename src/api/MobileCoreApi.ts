@@ -43,9 +43,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling addExternalLogin');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling addExternalLogin.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -75,9 +75,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling changePassword');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling changePassword.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -107,9 +107,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'checkinContract' is set
-            if (!checkinContract) {
-                throw new Error('Missing required parameter checkinContract when calling checkIn');
+            // verify required parameter 'checkinContract' is not null or undefined
+            if (checkinContract === null || checkinContract === undefined) {
+                throw new Error('Required parameter checkinContract was null or undefined when calling checkIn.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
@@ -238,9 +238,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'returnUrl' is set
-            if (!returnUrl) {
-                throw new Error('Missing required parameter returnUrl when calling getManageInfo');
+            // verify required parameter 'returnUrl' is not null or undefined
+            if (returnUrl === null || returnUrl === undefined) {
+                throw new Error('Required parameter returnUrl was null or undefined when calling getManageInfo.');
             }
             if (returnUrl !== undefined) {
                 queryParameters['returnUrl'] = returnUrl;
@@ -278,9 +278,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'token' is set
-            if (!token) {
-                throw new Error('Missing required parameter token when calling getRegistrationToken');
+            // verify required parameter 'token' is not null or undefined
+            if (token === null || token === undefined) {
+                throw new Error('Required parameter token was null or undefined when calling getRegistrationToken.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -314,21 +314,21 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getReservationAvailability');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getReservationAvailability.');
             }
-            // verify required parameter 'date' is set
-            if (!date) {
-                throw new Error('Missing required parameter date when calling getReservationAvailability');
+            // verify required parameter 'date' is not null or undefined
+            if (date === null || date === undefined) {
+                throw new Error('Required parameter date was null or undefined when calling getReservationAvailability.');
             }
-            // verify required parameter 'partySize' is set
-            if (!partySize) {
-                throw new Error('Missing required parameter partySize when calling getReservationAvailability');
+            // verify required parameter 'partySize' is not null or undefined
+            if (partySize === null || partySize === undefined) {
+                throw new Error('Required parameter partySize was null or undefined when calling getReservationAvailability.');
             }
-            // verify required parameter 'rangeInMinutes' is set
-            if (!rangeInMinutes) {
-                throw new Error('Missing required parameter rangeInMinutes when calling getReservationAvailability');
+            // verify required parameter 'rangeInMinutes' is not null or undefined
+            if (rangeInMinutes === null || rangeInMinutes === undefined) {
+                throw new Error('Required parameter rangeInMinutes was null or undefined when calling getReservationAvailability.');
             }
             if (date !== undefined) {
                 queryParameters['date'] = date;
@@ -374,9 +374,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'id' is set
-            if (!id) {
-                throw new Error('Missing required parameter id when calling getRestaurantById');
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getRestaurantById.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -457,9 +457,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'image' is set
-            if (!image) {
-                throw new Error('Missing required parameter image when calling postProfileImage');
+            // verify required parameter 'image' is not null or undefined
+            if (image === null || image === undefined) {
+                throw new Error('Required parameter image was null or undefined when calling postProfileImage.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -515,9 +515,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling register');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling register.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -547,9 +547,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling registerExternal');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling registerExternal.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -579,9 +579,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling removeLogin');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling removeLogin.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -611,9 +611,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling resetPassword');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling resetPassword.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -643,9 +643,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'model' is set
-            if (!model) {
-                throw new Error('Missing required parameter model when calling setPassword');
+            // verify required parameter 'model' is not null or undefined
+            if (model === null || model === undefined) {
+                throw new Error('Required parameter model was null or undefined when calling setPassword.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -675,9 +675,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'channel' is set
-            if (!channel) {
-                throw new Error('Missing required parameter channel when calling setPushChannelAsync');
+            // verify required parameter 'channel' is not null or undefined
+            if (channel === null || channel === undefined) {
+                throw new Error('Required parameter channel was null or undefined when calling setPushChannelAsync.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -707,9 +707,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'profile' is set
-            if (!profile) {
-                throw new Error('Missing required parameter profile when calling updateUserProfile');
+            // verify required parameter 'profile' is not null or undefined
+            if (profile === null || profile === undefined) {
+                throw new Error('Required parameter profile was null or undefined when calling updateUserProfile.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',

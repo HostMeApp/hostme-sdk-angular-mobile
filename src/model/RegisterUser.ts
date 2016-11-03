@@ -2,15 +2,15 @@
 import * as models from './models';
 
 export interface RegisterUser {
+        "email"?: string;
 
-    email?: string;
+        "fullName": string;
 
-    fullName?: string;
+        "phoneNumber": string;
 
-    phoneNumber?: string;
+        "password": string;
 
-    password?: string;
+        "confirmPassword"?: string;
 
-    confirmPassword?: string;
 }
 

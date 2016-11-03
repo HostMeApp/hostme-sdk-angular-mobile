@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface ExternalLogin {
+        "name"?: string;
 
-    name?: string;
+        "url"?: string;
 
-    url?: string;
+        "state"?: string;
 
-    state?: string;
 }
 

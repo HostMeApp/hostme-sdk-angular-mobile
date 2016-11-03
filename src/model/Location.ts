@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface Location {
+        "city"?: string;
 
-    city?: string;
+        "state"?: string;
 
-    state?: string;
+        "country"?: string;
 
-    country?: string;
 }
 

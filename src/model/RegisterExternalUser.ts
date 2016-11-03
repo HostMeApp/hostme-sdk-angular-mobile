@@ -2,13 +2,13 @@
 import * as models from './models';
 
 export interface RegisterExternalUser {
+        "email"?: string;
 
-    email?: string;
+        "fullName": string;
 
-    fullName?: string;
+        "phoneNumber": string;
 
-    phoneNumber?: string;
+        "externalAccessToken": string;
 
-    externalAccessToken?: string;
 }
 

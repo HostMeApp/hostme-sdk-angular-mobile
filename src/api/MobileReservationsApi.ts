@@ -43,9 +43,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'value' is set
-            if (!value) {
-                throw new Error('Missing required parameter value when calling addNewReservation');
+            // verify required parameter 'value' is not null or undefined
+            if (value === null || value === undefined) {
+                throw new Error('Required parameter value was null or undefined when calling addNewReservation.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -77,13 +77,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'reservationId' is set
-            if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling closeAsCanceled');
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling closeAsCanceled.');
             }
-            // verify required parameter 'cancelReservationContract' is set
-            if (!cancelReservationContract) {
-                throw new Error('Missing required parameter cancelReservationContract when calling closeAsCanceled');
+            // verify required parameter 'cancelReservationContract' is not null or undefined
+            if (cancelReservationContract === null || cancelReservationContract === undefined) {
+                throw new Error('Required parameter cancelReservationContract was null or undefined when calling closeAsCanceled.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',
@@ -114,9 +114,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'reservationId' is set
-            if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling getReservationById');
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling getReservationById.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -177,9 +177,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'reservationId' is set
-            if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling readAllMessage');
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling readAllMessage.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -210,13 +210,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'reservationId' is set
-            if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling sendMessageToReservation');
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling sendMessageToReservation.');
             }
-            // verify required parameter 'createMessageContract' is set
-            if (!createMessageContract) {
-                throw new Error('Missing required parameter createMessageContract when calling sendMessageToReservation');
+            // verify required parameter 'createMessageContract' is not null or undefined
+            if (createMessageContract === null || createMessageContract === undefined) {
+                throw new Error('Required parameter createMessageContract was null or undefined when calling sendMessageToReservation.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -248,13 +248,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'reservationId' is set
-            if (!reservationId) {
-                throw new Error('Missing required parameter reservationId when calling updateReservation');
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling updateReservation.');
             }
-            // verify required parameter 'value' is set
-            if (!value) {
-                throw new Error('Missing required parameter value when calling updateReservation');
+            // verify required parameter 'value' is not null or undefined
+            if (value === null || value === undefined) {
+                throw new Error('Required parameter value was null or undefined when calling updateReservation.');
             }
             let httpRequestParams: any = {
                 method: 'PUT',

@@ -2,57 +2,57 @@
 import * as models from './models';
 
 export interface RestaurantInfo {
+        "hoursInterval"?: number;
 
-    hoursInterval?: number;
+        "city"?: string;
 
-    city?: string;
+        "maxPartySize"?: number;
 
-    maxPartySize?: number;
+        "minPartySize"?: number;
 
-    minPartySize?: number;
+        "openingHours"?: models.BusinessHours;
 
-    openingHours?: models.BusinessHours;
+        "reservationHours"?: models.BusinessHours;
 
-    reservationHours?: models.BusinessHours;
+        "seatingZones"?: Array<string>;
 
-    seatingZones?: Array<string>;
+        "id"?: number;
 
-    id?: number;
+        "name"?: string;
 
-    name?: string;
+        "address"?: string;
 
-    address?: string;
+        "imageUrl"?: string;
 
-    imageUrl?: string;
+        "facebookId"?: string;
 
-    facebookId?: string;
+        "twitterAccount"?: string;
 
-    twitterAccount?: string;
+        "websiteUrl"?: string;
 
-    websiteUrl?: string;
+        "foursquareId"?: string;
 
-    foursquareId?: string;
+        "phone"?: string;
 
-    phone?: string;
+        "timeZone"?: string;
 
-    timeZone?: string;
+        "lat"?: number;
 
-    lat?: number;
+        "lon"?: number;
 
-    lon?: number;
+        "hasHostmeSystem"?: boolean;
 
-    hasHostmeSystem?: boolean;
+        "distance"?: number;
 
-    distance?: number;
+        "hasLoyaltyProgram"?: boolean;
 
-    hasLoyaltyProgram?: boolean;
+        "acceptRemouteLine"?: boolean;
 
-    acceptRemouteLine?: boolean;
+        "acceptReservation"?: boolean;
 
-    acceptReservation?: boolean;
+        "allowManualHold"?: boolean;
 
-    allowManualHold?: boolean;
+        "currentLineStats"?: models.WaitingStats;
 
-    currentLineStats?: models.WaitingStats;
 }
 

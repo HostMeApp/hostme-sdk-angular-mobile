@@ -2,21 +2,20 @@
 import * as models from './models';
 
 export interface RewardValue {
+        "amount"?: number;
 
-    amount?: number;
+        "discount"?: number;
 
-    discount?: number;
+        "freeMeal"?: string;
 
-    freeMeal?: string;
+        "type"?: RewardValue.TypeEnum;
 
-    type?: RewardValue.TypeEnum;
 }
 
 export namespace RewardValue {
-
-    export enum TypeEnum { 
-        Discount = <any> 'Discount',
-        FreeMeal = <any> 'FreeMeal',
-        MoneyOff = <any> 'MoneyOff',
-    }
+        export enum TypeEnum {
+            Discount = <any> 'Discount',
+            FreeMeal = <any> 'FreeMeal',
+            MoneyOff = <any> 'MoneyOff'
+        }
 }

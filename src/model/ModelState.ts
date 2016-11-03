@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface ModelState {
+        "value"?: models.ValueProviderResult;
 
-    value?: models.ValueProviderResult;
+        "errors"?: Array<models.ModelError>;
 
-    errors?: Array<models.ModelError>;
 }
 

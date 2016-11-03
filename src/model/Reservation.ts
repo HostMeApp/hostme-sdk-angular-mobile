@@ -2,56 +2,55 @@
 import * as models from './models';
 
 export interface Reservation {
+        "unreadMessageCount"?: number;
 
-    unreadMessageCount?: number;
+        "id"?: string;
 
-    id?: string;
+        "restaurant"?: models.RestaurantContactInfo;
 
-    restaurant?: models.RestaurantContactInfo;
+        "created"?: Date;
 
-    created?: string;
+        "closed"?: Date;
 
-    closed?: string;
+        "reservationTime"?: Date;
 
-    reservationTime?: string;
+        "status"?: string;
 
-    status?: string;
+        "customerName"?: string;
 
-    customerName?: string;
+        "groupSize"?: number;
 
-    groupSize?: number;
+        "phone"?: string;
 
-    phone?: string;
+        "notificationUrl"?: string;
 
-    notificationUrl?: string;
+        "areas"?: string;
 
-    areas?: string;
+        "note"?: string;
 
-    note?: string;
+        "tableNumber"?: string;
 
-    tableNumber?: string;
+        "highChair"?: boolean;
 
-    highChair?: boolean;
+        "stroller"?: boolean;
 
-    stroller?: boolean;
+        "estimatedTurnOverTime"?: number;
 
-    estimatedTurnOverTime?: number;
+        "messages"?: Array<models.Message>;
 
-    messages?: Array<models.Message>;
+        "membership"?: models.MembershipInfo;
 
-    membership?: models.MembershipInfo;
+        "type"?: Reservation.TypeEnum;
 
-    type?: Reservation.TypeEnum;
+        "party"?: boolean;
 
-    party?: boolean;
+        "customerProfile"?: models.Profile;
 
-    customerProfile?: models.Profile;
 }
 
 export namespace Reservation {
-
-    export enum TypeEnum { 
-        Standard = <any> 'Standard',
-        Hybrid = <any> 'Hybrid',
-    }
+        export enum TypeEnum {
+            Standard = <any> 'Standard',
+            Hybrid = <any> 'Hybrid'
+        }
 }

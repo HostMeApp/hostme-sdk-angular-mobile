@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface IEdmTypeReference {
+        "isNullable"?: boolean;
 
-    isNullable?: boolean;
+        "definition"?: models.IEdmType;
 
-    definition?: models.IEdmType;
 }
 

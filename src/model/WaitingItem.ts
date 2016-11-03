@@ -2,67 +2,67 @@
 import * as models from './models';
 
 export interface WaitingItem {
+        "id"?: number;
 
-    id?: number;
+        "status"?: string;
 
-    status?: string;
+        "created"?: Date;
 
-    created?: string;
+        "closed"?: Date;
 
-    closed?: string;
+        "confirmationCode"?: number;
 
-    confirmationCode?: number;
+        "customerName"?: string;
 
-    customerName?: string;
+        "groupSize"?: number;
 
-    groupSize?: number;
+        "phone"?: string;
 
-    phone?: string;
+        "registrationMethod"?: string;
 
-    registrationMethod?: string;
+        "deviceType"?: string;
 
-    deviceType?: string;
+        "notificationUrl"?: string;
 
-    notificationUrl?: string;
+        "areas"?: string;
 
-    areas?: string;
+        "expectedTime"?: Date;
 
-    expectedTime?: string;
+        "position"?: number;
 
-    position?: number;
+        "note"?: string;
 
-    note?: string;
+        "tableNumber"?: string;
 
-    tableNumber?: string;
+        "statusTime"?: Date;
 
-    statusTime?: string;
+        "restaurantId"?: number;
 
-    restaurantId?: number;
+        "highChair"?: boolean;
 
-    highChair?: boolean;
+        "stroller"?: boolean;
 
-    stroller?: boolean;
+        "onHoldMode"?: string;
 
-    onHoldMode?: string;
+        "onHoldTime"?: Date;
 
-    onHoldTime?: string;
+        "onHoldEndTime"?: Date;
 
-    onHoldEndTime?: string;
+        "messages"?: Array<models.Message>;
 
-    messages?: Array<models.Message>;
+        "membership"?: models.MembershipInfo;
 
-    membership?: models.MembershipInfo;
+        "reservation"?: models.ReservationInfo;
 
-    reservation?: models.ReservationInfo;
+        "estimatedTurnOverTime"?: number;
 
-    estimatedTurnOverTime?: number;
+        "unreadMessageCount"?: number;
 
-    unreadMessageCount?: number;
+        "restaurant"?: models.RestaurantContactInfo;
 
-    restaurant?: models.RestaurantContactInfo;
+        "customerProfile"?: models.Profile;
 
-    customerProfile?: models.Profile;
+        "party"?: boolean;
 
-    party?: boolean;
 }
 

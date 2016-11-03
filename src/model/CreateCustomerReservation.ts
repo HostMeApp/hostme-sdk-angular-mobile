@@ -2,33 +2,33 @@
 import * as models from './models';
 
 export interface CreateCustomerReservation {
+        "restaurantId": number;
 
-    restaurantId?: number;
+        "reservationTime": Date;
 
-    reservationTime?: string;
+        "groupSize": number;
 
-    groupSize?: number;
+        "notificationUrl"?: string;
 
-    notificationUrl?: string;
+        "deviceType": string;
 
-    deviceType?: string;
+        "areas"?: string;
 
-    areas?: string;
+        "note"?: string;
 
-    note?: string;
+        "highChair"?: boolean;
 
-    highChair?: boolean;
+        "stroller"?: boolean;
 
-    stroller?: boolean;
+        "customerProfile"?: models.Profile;
 
-    customerProfile?: models.Profile;
+        "party"?: boolean;
 
-    party?: boolean;
+        "email"?: string;
 
-    email?: string;
+        "fullName"?: string;
 
-    fullName?: string;
+        "phoneNumber"?: string;
 
-    phoneNumber?: string;
 }
 

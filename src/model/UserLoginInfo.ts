@@ -2,9 +2,9 @@
 import * as models from './models';
 
 export interface UserLoginInfo {
+        "loginProvider"?: string;
 
-    loginProvider?: string;
+        "providerKey"?: string;
 
-    providerKey?: string;
 }
 

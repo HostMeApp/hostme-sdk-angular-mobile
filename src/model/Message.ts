@@ -2,23 +2,23 @@
 import * as models from './models';
 
 export interface Message {
+        "id"?: number;
 
-    id?: number;
+        "body"?: string;
 
-    body?: string;
+        "time"?: Date;
 
-    time?: string;
+        "origin"?: string;
 
-    origin?: string;
+        "isAutoMessage"?: boolean;
 
-    isAutoMessage?: boolean;
+        "deliveryStatus"?: string;
 
-    deliveryStatus?: string;
+        "deliveryTime"?: Date;
 
-    deliveryTime?: string;
+        "deliveryFailureReason"?: string;
 
-    deliveryFailureReason?: string;
+        "isRead"?: boolean;
 
-    isRead?: boolean;
 }
 

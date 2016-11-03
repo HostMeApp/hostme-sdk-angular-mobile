@@ -2,21 +2,21 @@
 import * as models from './models';
 
 export interface UpdateReservation {
+        "reservationTime": Date;
 
-    reservationTime?: string;
+        "groupSize": number;
 
-    groupSize?: number;
+        "areas"?: string;
 
-    areas?: string;
+        "note"?: string;
 
-    note?: string;
+        "highChair"?: boolean;
 
-    highChair?: boolean;
+        "stroller"?: boolean;
 
-    stroller?: boolean;
+        "party"?: boolean;
 
-    party?: boolean;
+        "customerProfile"?: models.Profile;
 
-    customerProfile?: models.Profile;
 }
 

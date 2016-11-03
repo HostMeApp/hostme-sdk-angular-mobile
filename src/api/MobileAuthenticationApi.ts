@@ -43,9 +43,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'accessToken' is set
-            if (!accessToken) {
-                throw new Error('Missing required parameter accessToken when calling getExternalFacebookLogin');
+            // verify required parameter 'accessToken' is not null or undefined
+            if (accessToken === null || accessToken === undefined) {
+                throw new Error('Required parameter accessToken was null or undefined when calling getExternalFacebookLogin.');
             }
             if (accessToken !== undefined) {
                 queryParameters['access_token'] = accessToken;
@@ -78,9 +78,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'provider' is set
-            if (!provider) {
-                throw new Error('Missing required parameter provider when calling getExternalLogin');
+            // verify required parameter 'provider' is not null or undefined
+            if (provider === null || provider === undefined) {
+                throw new Error('Required parameter provider was null or undefined when calling getExternalLogin.');
             }
             if (provider !== undefined) {
                 queryParameters['provider'] = provider;
@@ -117,9 +117,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'returnUrl' is set
-            if (!returnUrl) {
-                throw new Error('Missing required parameter returnUrl when calling getExternalLogins');
+            // verify required parameter 'returnUrl' is not null or undefined
+            if (returnUrl === null || returnUrl === undefined) {
+                throw new Error('Required parameter returnUrl was null or undefined when calling getExternalLogins.');
             }
             if (returnUrl !== undefined) {
                 queryParameters['returnUrl'] = returnUrl;

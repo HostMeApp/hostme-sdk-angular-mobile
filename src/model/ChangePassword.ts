@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface ChangePassword {
+        "oldPassword": string;
 
-    oldPassword?: string;
+        "newPassword": string;
 
-    newPassword?: string;
+        "confirmPassword": string;
 
-    confirmPassword?: string;
 }
 

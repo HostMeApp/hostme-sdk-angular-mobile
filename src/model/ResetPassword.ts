@@ -2,7 +2,7 @@
 import * as models from './models';
 
 export interface ResetPassword {
+        "email": string;
 
-    email?: string;
 }
 

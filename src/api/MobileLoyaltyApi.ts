@@ -44,9 +44,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling cancelMembershipAtRestaurant');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling cancelMembershipAtRestaurant.');
             }
             let httpRequestParams: any = {
                 method: 'DELETE',
@@ -76,9 +76,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling enrollIntoLoyaltyProgram');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling enrollIntoLoyaltyProgram.');
             }
             let httpRequestParams: any = {
                 method: 'POST',
@@ -134,9 +134,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getCustomerRedeemRequests');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getCustomerRedeemRequests.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -166,9 +166,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getMemberRewardOptions');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getMemberRewardOptions.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -198,9 +198,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getMemberTransactions');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getMemberTransactions.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -230,9 +230,9 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getMembershipByRestaurantId');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getMembershipByRestaurantId.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -264,13 +264,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling getRedeemRequestInfo');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling getRedeemRequestInfo.');
             }
-            // verify required parameter 'redeemId' is set
-            if (!redeemId) {
-                throw new Error('Missing required parameter redeemId when calling getRedeemRequestInfo');
+            // verify required parameter 'redeemId' is not null or undefined
+            if (redeemId === null || redeemId === undefined) {
+                throw new Error('Required parameter redeemId was null or undefined when calling getRedeemRequestInfo.');
             }
             let httpRequestParams: any = {
                 method: 'GET',
@@ -302,13 +302,13 @@ import {IApiConfig} from '../client/IApiConfig';
 
             let queryParameters: any = {};
             let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'restaurantId' is set
-            if (!restaurantId) {
-                throw new Error('Missing required parameter restaurantId when calling submitRequestForRedeem');
+            // verify required parameter 'restaurantId' is not null or undefined
+            if (restaurantId === null || restaurantId === undefined) {
+                throw new Error('Required parameter restaurantId was null or undefined when calling submitRequestForRedeem.');
             }
-            // verify required parameter 'rewardId' is set
-            if (!rewardId) {
-                throw new Error('Missing required parameter rewardId when calling submitRequestForRedeem');
+            // verify required parameter 'rewardId' is not null or undefined
+            if (rewardId === null || rewardId === undefined) {
+                throw new Error('Required parameter rewardId was null or undefined when calling submitRequestForRedeem.');
             }
             let httpRequestParams: any = {
                 method: 'GET',

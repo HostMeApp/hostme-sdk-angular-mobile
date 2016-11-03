@@ -2,11 +2,11 @@
 import * as models from './models';
 
 export interface ValueProviderResult {
+        "attemptedValue"?: string;
 
-    attemptedValue?: string;
+        "culture"?: string;
 
-    culture?: string;
+        "rawValue"?: any;
 
-    rawValue?: any;
 }
 

@@ -2,19 +2,19 @@
 import * as models from './models';
 
 export interface RestaurantContactInfo {
+        "id"?: number;
 
-    id?: number;
+        "name"?: string;
 
-    name?: string;
+        "address"?: string;
 
-    address?: string;
+        "imageUrl"?: string;
 
-    imageUrl?: string;
+        "websiteUrl"?: string;
 
-    websiteUrl?: string;
+        "phone"?: string;
 
-    phone?: string;
+        "timeZone"?: string;
 
-    timeZone?: string;
 }
 
