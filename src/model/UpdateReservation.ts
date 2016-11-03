@@ -10,6 +10,10 @@ export interface UpdateReservation {
 
         "note"?: string;
 
+        "customerName"?: string;
+
+        "phone": string;
+
         "highChair"?: boolean;
 
         "stroller"?: boolean;
