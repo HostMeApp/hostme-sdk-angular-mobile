@@ -31,8 +31,8 @@ var MobileAuthenticationApi = (function () {
         var localVarPath = this.config.basePath + '/authorization/externalFacebookLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!accessToken) {
-            throw new Error('Missing required parameter accessToken when calling getExternalFacebookLogin');
+        if (accessToken === null || accessToken === undefined) {
+            throw new Error('Required parameter accessToken was null or undefined when calling getExternalFacebookLogin.');
         }
         if (accessToken !== undefined) {
             queryParameters['access_token'] = accessToken;
@@ -54,8 +54,8 @@ var MobileAuthenticationApi = (function () {
         var localVarPath = this.config.basePath + '/authorization/externalLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!provider) {
-            throw new Error('Missing required parameter provider when calling getExternalLogin');
+        if (provider === null || provider === undefined) {
+            throw new Error('Required parameter provider was null or undefined when calling getExternalLogin.');
         }
         if (provider !== undefined) {
             queryParameters['provider'] = provider;
@@ -80,8 +80,8 @@ var MobileAuthenticationApi = (function () {
         var localVarPath = this.config.basePath + '/authorization/externalLogins';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!returnUrl) {
-            throw new Error('Missing required parameter returnUrl when calling getExternalLogins');
+        if (returnUrl === null || returnUrl === undefined) {
+            throw new Error('Required parameter returnUrl was null or undefined when calling getExternalLogins.');
         }
         if (returnUrl !== undefined) {
             queryParameters['returnUrl'] = returnUrl;

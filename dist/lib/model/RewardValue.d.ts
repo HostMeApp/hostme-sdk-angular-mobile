@@ -1,8 +1,8 @@
 export interface RewardValue {
-    amount?: number;
-    discount?: number;
-    freeMeal?: string;
-    type?: RewardValue.TypeEnum;
+    "amount"?: number;
+    "discount"?: number;
+    "freeMeal"?: string;
+    "type"?: RewardValue.TypeEnum;
 }
 export declare namespace RewardValue {
     enum TypeEnum {

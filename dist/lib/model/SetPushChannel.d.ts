@@ -1,4 +1,4 @@
 export interface SetPushChannel {
-    notificationUrl?: string;
-    deviceType?: string;
+    "notificationUrl": string;
+    "deviceType": string;
 }

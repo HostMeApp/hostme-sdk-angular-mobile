@@ -1,7 +1,7 @@
 export interface UserProfile {
-    email?: string;
-    fullName?: string;
-    phoneNumber?: string;
-    gender?: string;
-    dob?: string;
+    "email"?: string;
+    "fullName": string;
+    "phoneNumber": string;
+    "gender"?: string;
+    "dob"?: Date;
 }

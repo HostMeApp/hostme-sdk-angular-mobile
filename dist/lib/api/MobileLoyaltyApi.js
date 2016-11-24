@@ -32,8 +32,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling cancelMembershipAtRestaurant');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling cancelMembershipAtRestaurant.');
         }
         var httpRequestParams = {
             method: 'DELETE',
@@ -54,8 +54,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling enrollIntoLoyaltyProgram');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling enrollIntoLoyaltyProgram.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -94,8 +94,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getCustomerRedeemRequests');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getCustomerRedeemRequests.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -116,8 +116,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getMemberRewardOptions');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getMemberRewardOptions.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -138,8 +138,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getMemberTransactions');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getMemberTransactions.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -160,8 +160,8 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getMembershipByRestaurantId');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getMembershipByRestaurantId.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -183,11 +183,11 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'redeemId' + '}', String(redeemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getRedeemRequestInfo');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getRedeemRequestInfo.');
         }
-        if (!redeemId) {
-            throw new Error('Missing required parameter redeemId when calling getRedeemRequestInfo');
+        if (redeemId === null || redeemId === undefined) {
+            throw new Error('Required parameter redeemId was null or undefined when calling getRedeemRequestInfo.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -209,11 +209,11 @@ var MobileLoyaltyApi = (function () {
             .replace('{' + 'rewardId' + '}', String(rewardId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling submitRequestForRedeem');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling submitRequestForRedeem.');
         }
-        if (!rewardId) {
-            throw new Error('Missing required parameter rewardId when calling submitRequestForRedeem');
+        if (rewardId === null || rewardId === undefined) {
+            throw new Error('Required parameter rewardId was null or undefined when calling submitRequestForRedeem.');
         }
         var httpRequestParams = {
             method: 'GET',

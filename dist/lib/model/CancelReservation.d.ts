@@ -1,3 +1,3 @@
 export interface CancelReservation {
-    note?: string;
+    "note"?: string;
 }

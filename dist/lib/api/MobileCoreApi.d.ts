@@ -16,7 +16,6 @@ export declare class MobileCoreApi {
     private extendObj<T1, T2>(objA, objB);
     addExternalLogin(model: models.AddExternalLogin, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     changePassword(model: models.ChangePassword, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
-    checkIn(checkinContract: models.TransactionCheckin, extraHttpRequestParams?: any): ng.IHttpPromise<models.Transaction>;
     findRestaurants(lat?: number, lon?: number, name?: string, city?: string, extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.RestaurantInfo>>;
     getAllRestaurants(extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.RestaurantInfo>>;
     getListOfLocations(extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.Location>>;

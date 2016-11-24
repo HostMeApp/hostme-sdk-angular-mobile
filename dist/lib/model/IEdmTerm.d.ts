@@ -1,8 +1,8 @@
 export interface IEdmTerm {
-    termKind?: IEdmTerm.TermKindEnum;
-    schemaElementKind?: IEdmTerm.SchemaElementKindEnum;
-    namespace?: string;
-    name?: string;
+    "termKind"?: IEdmTerm.TermKindEnum;
+    "schemaElementKind"?: IEdmTerm.SchemaElementKindEnum;
+    "namespace"?: string;
+    "name"?: string;
 }
 export declare namespace IEdmTerm {
     enum TermKindEnum {

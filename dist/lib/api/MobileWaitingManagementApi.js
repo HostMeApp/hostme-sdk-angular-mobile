@@ -32,8 +32,8 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling checkInWithWaiting');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling checkInWithWaiting.');
         }
         var httpRequestParams = {
             method: 'PUT',
@@ -54,8 +54,8 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling close');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling close.');
         }
         var httpRequestParams = {
             method: 'PUT',
@@ -76,11 +76,11 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'confirmationCode' + '}', String(confirmationCode));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!confirmationCode) {
-            throw new Error('Missing required parameter confirmationCode when calling confirmWithApp');
+        if (confirmationCode === null || confirmationCode === undefined) {
+            throw new Error('Required parameter confirmationCode was null or undefined when calling confirmWithApp.');
         }
-        if (!conf) {
-            throw new Error('Missing required parameter conf when calling confirmWithApp');
+        if (conf === null || conf === undefined) {
+            throw new Error('Required parameter conf was null or undefined when calling confirmWithApp.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -101,8 +101,8 @@ var MobileWaitingManagementApi = (function () {
         var localVarPath = this.config.basePath + '/api/wm/mb/waitings';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!value) {
-            throw new Error('Missing required parameter value when calling getInLine');
+        if (value === null || value === undefined) {
+            throw new Error('Required parameter value was null or undefined when calling getInLine.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -142,8 +142,8 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling leaveTheLine');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling leaveTheLine.');
         }
         var httpRequestParams = {
             method: 'PUT',
@@ -164,8 +164,8 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling markAllMessagesAsRead');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling markAllMessagesAsRead.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -186,11 +186,11 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling putOnHold');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling putOnHold.');
         }
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling putOnHold');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling putOnHold.');
         }
         if (restaurantId !== undefined) {
             queryParameters['restaurantId'] = restaurantId;
@@ -214,11 +214,11 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling sendMessageToWaiting');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling sendMessageToWaiting.');
         }
-        if (!createMessage) {
-            throw new Error('Missing required parameter createMessage when calling sendMessageToWaiting');
+        if (createMessage === null || createMessage === undefined) {
+            throw new Error('Required parameter createMessage was null or undefined when calling sendMessageToWaiting.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -240,11 +240,11 @@ var MobileWaitingManagementApi = (function () {
             .replace('{' + 'waitingItemId' + '}', String(waitingItemId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling takeOffHold');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling takeOffHold.');
         }
-        if (!waitingItemId) {
-            throw new Error('Missing required parameter waitingItemId when calling takeOffHold');
+        if (waitingItemId === null || waitingItemId === undefined) {
+            throw new Error('Required parameter waitingItemId was null or undefined when calling takeOffHold.');
         }
         if (restaurantId !== undefined) {
             queryParameters['restaurantId'] = restaurantId;

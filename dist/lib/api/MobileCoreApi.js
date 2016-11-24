@@ -31,8 +31,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/addExternalLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling addExternalLogin');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling addExternalLogin.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -53,36 +53,14 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/changePassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling changePassword');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling changePassword.');
         }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             json: true,
             data: model,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-        }
-        this.authentications.oauth2.applyToRequest(httpRequestParams);
-        this.authentications.default.applyToRequest(httpRequestParams);
-        return this.$http(httpRequestParams);
-    };
-    MobileCoreApi.prototype.checkIn = function (checkinContract, extraHttpRequestParams) {
-        var localVarPath = this.config.basePath + '/api/core/mb/restaurant/checkin';
-        var queryParameters = {};
-        var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!checkinContract) {
-            throw new Error('Missing required parameter checkinContract when calling checkIn');
-        }
-        var httpRequestParams = {
-            method: 'PUT',
-            url: localVarPath,
-            json: true,
-            data: checkinContract,
             params: queryParameters,
             headers: headerParams
         };
@@ -163,8 +141,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/manageInfo';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!returnUrl) {
-            throw new Error('Missing required parameter returnUrl when calling getManageInfo');
+        if (returnUrl === null || returnUrl === undefined) {
+            throw new Error('Required parameter returnUrl was null or undefined when calling getManageInfo.');
         }
         if (returnUrl !== undefined) {
             queryParameters['returnUrl'] = returnUrl;
@@ -191,8 +169,8 @@ var MobileCoreApi = (function () {
             .replace('{' + 'token' + '}', String(token));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!token) {
-            throw new Error('Missing required parameter token when calling getRegistrationToken');
+        if (token === null || token === undefined) {
+            throw new Error('Required parameter token was null or undefined when calling getRegistrationToken.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -213,17 +191,17 @@ var MobileCoreApi = (function () {
             .replace('{' + 'restaurantId' + '}', String(restaurantId));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!restaurantId) {
-            throw new Error('Missing required parameter restaurantId when calling getReservationAvailability');
+        if (restaurantId === null || restaurantId === undefined) {
+            throw new Error('Required parameter restaurantId was null or undefined when calling getReservationAvailability.');
         }
-        if (!date) {
-            throw new Error('Missing required parameter date when calling getReservationAvailability');
+        if (date === null || date === undefined) {
+            throw new Error('Required parameter date was null or undefined when calling getReservationAvailability.');
         }
-        if (!partySize) {
-            throw new Error('Missing required parameter partySize when calling getReservationAvailability');
+        if (partySize === null || partySize === undefined) {
+            throw new Error('Required parameter partySize was null or undefined when calling getReservationAvailability.');
         }
-        if (!rangeInMinutes) {
-            throw new Error('Missing required parameter rangeInMinutes when calling getReservationAvailability');
+        if (rangeInMinutes === null || rangeInMinutes === undefined) {
+            throw new Error('Required parameter rangeInMinutes was null or undefined when calling getReservationAvailability.');
         }
         if (date !== undefined) {
             queryParameters['date'] = date;
@@ -256,8 +234,8 @@ var MobileCoreApi = (function () {
             .replace('{' + 'id' + '}', String(id));
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!id) {
-            throw new Error('Missing required parameter id when calling getRestaurantById');
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling getRestaurantById.');
         }
         var httpRequestParams = {
             method: 'GET',
@@ -313,8 +291,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/profile/image';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!image) {
-            throw new Error('Missing required parameter image when calling postProfileImage');
+        if (image === null || image === undefined) {
+            throw new Error('Required parameter image was null or undefined when calling postProfileImage.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -353,8 +331,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/register';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling register');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling register.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -375,8 +353,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/registerExternal';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling registerExternal');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling registerExternal.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -397,8 +375,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/removeLogin';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling removeLogin');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling removeLogin.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -419,8 +397,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/resetPassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling resetPassword');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling resetPassword.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -441,8 +419,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/setPassword';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!model) {
-            throw new Error('Missing required parameter model when calling setPassword');
+        if (model === null || model === undefined) {
+            throw new Error('Required parameter model was null or undefined when calling setPassword.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -463,8 +441,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/setPushChannel';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!channel) {
-            throw new Error('Missing required parameter channel when calling setPushChannelAsync');
+        if (channel === null || channel === undefined) {
+            throw new Error('Required parameter channel was null or undefined when calling setPushChannelAsync.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -485,8 +463,8 @@ var MobileCoreApi = (function () {
         var localVarPath = this.config.basePath + '/api/core/mb/account/profile';
         var queryParameters = {};
         var headerParams = this.extendObj({}, this.defaultHeaders);
-        if (!profile) {
-            throw new Error('Missing required parameter profile when calling updateUserProfile');
+        if (profile === null || profile === undefined) {
+            throw new Error('Required parameter profile was null or undefined when calling updateUserProfile.');
         }
         var httpRequestParams = {
             method: 'PUT',

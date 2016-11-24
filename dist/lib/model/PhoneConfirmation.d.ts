@@ -1,5 +1,5 @@
 export interface PhoneConfirmation {
-    deviceType?: string;
-    customerName?: string;
-    notificationUrl?: string;
+    "deviceType": string;
+    "customerName": string;
+    "notificationUrl": string;
 }

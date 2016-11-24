@@ -1,3 +1,3 @@
 export interface AddExternalLogin {
-    externalAccessToken?: string;
+    "externalAccessToken": string;
 }

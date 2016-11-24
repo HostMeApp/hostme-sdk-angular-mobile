@@ -9,6 +9,7 @@ __export(require('./OnlineAvailability'));
 __export(require('./OrderByClause'));
 __export(require('./RedeemRequestInfo'));
 __export(require('./Reservation'));
+__export(require('./ReservationGuest'));
 __export(require('./RewardValue'));
 __export(require('./SingleValueNode'));
 //# sourceMappingURL=models.js.map
