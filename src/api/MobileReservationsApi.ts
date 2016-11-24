@@ -230,6 +230,7 @@ import {IApiConfig} from '../client/IApiConfig';
                 httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
             }
             
+                this.authentications.oauth2.applyToRequest(httpRequestParams);
             this.authentications.default.applyToRequest(httpRequestParams);
 
             return this.$http(httpRequestParams);
@@ -292,6 +293,7 @@ import {IApiConfig} from '../client/IApiConfig';
                 httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
             }
             
+                this.authentications.oauth2.applyToRequest(httpRequestParams);
             this.authentications.default.applyToRequest(httpRequestParams);
 
             return this.$http(httpRequestParams);
@@ -329,6 +331,7 @@ import {IApiConfig} from '../client/IApiConfig';
                 httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
             }
             
+                this.authentications.oauth2.applyToRequest(httpRequestParams);
             this.authentications.default.applyToRequest(httpRequestParams);
 
             return this.$http(httpRequestParams);
@@ -403,6 +406,7 @@ import {IApiConfig} from '../client/IApiConfig';
                 httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
             }
             
+                this.authentications.oauth2.applyToRequest(httpRequestParams);
             this.authentications.default.applyToRequest(httpRequestParams);
 
             return this.$http(httpRequestParams);

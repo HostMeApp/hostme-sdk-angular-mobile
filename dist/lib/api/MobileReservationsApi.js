@@ -161,6 +161,7 @@ var MobileReservationsApi = (function () {
         if (extraHttpRequestParams) {
             httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
         }
+        this.authentications.oauth2.applyToRequest(httpRequestParams);
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
@@ -203,6 +204,7 @@ var MobileReservationsApi = (function () {
         if (extraHttpRequestParams) {
             httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
         }
+        this.authentications.oauth2.applyToRequest(httpRequestParams);
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
@@ -228,6 +230,7 @@ var MobileReservationsApi = (function () {
         if (extraHttpRequestParams) {
             httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
         }
+        this.authentications.oauth2.applyToRequest(httpRequestParams);
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
@@ -278,6 +281,7 @@ var MobileReservationsApi = (function () {
         if (extraHttpRequestParams) {
             httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
         }
+        this.authentications.oauth2.applyToRequest(httpRequestParams);
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
