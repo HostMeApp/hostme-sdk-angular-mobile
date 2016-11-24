@@ -2,9 +2,7 @@
 import * as models from './models';
 
 export interface Profile {
-        "allergy"?: Array<string>;
-
-        "vegetarian"?: boolean;
-
+	allergy?: Array<string>;
+	vegetarian?: boolean;
 }
 

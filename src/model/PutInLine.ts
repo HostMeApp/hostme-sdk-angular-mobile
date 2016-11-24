@@ -2,25 +2,15 @@
 import * as models from './models';
 
 export interface PutInLine {
-        "restaurantId": number;
-
-        "reservationTime": Date;
-
-        "customerName": string;
-
-        "groupSize": number;
-
-        "notificationUrl": string;
-
-        "deviceType": string;
-
-        "areas": string;
-
-        "note"?: string;
-
-        "highChair"?: boolean;
-
-        "stroller"?: boolean;
-
+	restaurantId: number;
+	reservationTime: string;
+	customerName: string;
+	groupSize: number;
+	notificationUrl: string;
+	deviceType: string;
+	areas: string;
+	note?: string;
+	highChair?: boolean;
+	stroller?: boolean;
 }
 

@@ -1,4 +1,4 @@
 export interface ReservationInfo {
-    "id"?: string;
-    "reservationTime"?: Date;
+    id?: string;
+    reservationTime?: string;
 }

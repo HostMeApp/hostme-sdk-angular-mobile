@@ -1,3 +1,3 @@
 export interface CreateMessage {
-    "body": string;
+    body: string;
 }

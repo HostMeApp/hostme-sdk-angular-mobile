@@ -2,7 +2,6 @@
 import * as models from './models';
 
 export interface CancelReservation {
-        "note"?: string;
-
+	note?: string;
 }
 

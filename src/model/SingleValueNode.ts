@@ -2,34 +2,32 @@
 import * as models from './models';
 
 export interface SingleValueNode {
-        "typeReference"?: models.IEdmTypeReference;
-
-        "kind"?: SingleValueNode.KindEnum;
-
+	typeReference?: models.IEdmTypeReference;
+	kind?: SingleValueNode.KindEnum;
 }
 
 export namespace SingleValueNode {
         export enum KindEnum {
-            None = <any> 'None',
-            Constant = <any> 'Constant',
-            Convert = <any> 'Convert',
-            NonentityRangeVariableReference = <any> 'NonentityRangeVariableReference',
-            BinaryOperator = <any> 'BinaryOperator',
-            UnaryOperator = <any> 'UnaryOperator',
-            SingleValuePropertyAccess = <any> 'SingleValuePropertyAccess',
-            CollectionPropertyAccess = <any> 'CollectionPropertyAccess',
-            SingleValueFunctionCall = <any> 'SingleValueFunctionCall',
-            Any = <any> 'Any',
-            CollectionNavigationNode = <any> 'CollectionNavigationNode',
-            SingleNavigationNode = <any> 'SingleNavigationNode',
-            SingleValueOpenPropertyAccess = <any> 'SingleValueOpenPropertyAccess',
-            SingleEntityCast = <any> 'SingleEntityCast',
-            All = <any> 'All',
-            EntityCollectionCast = <any> 'EntityCollectionCast',
-            EntityRangeVariableReference = <any> 'EntityRangeVariableReference',
-            SingleEntityFunctionCall = <any> 'SingleEntityFunctionCall',
-            CollectionFunctionCall = <any> 'CollectionFunctionCall',
-            EntityCollectionFunctionCall = <any> 'EntityCollectionFunctionCall',
-            NamedFunctionParameter = <any> 'NamedFunctionParameter'
+            None = 'None' as any,
+            Constant = 'Constant' as any,
+            Convert = 'Convert' as any,
+            NonentityRangeVariableReference = 'NonentityRangeVariableReference' as any,
+            BinaryOperator = 'BinaryOperator' as any,
+            UnaryOperator = 'UnaryOperator' as any,
+            SingleValuePropertyAccess = 'SingleValuePropertyAccess' as any,
+            CollectionPropertyAccess = 'CollectionPropertyAccess' as any,
+            SingleValueFunctionCall = 'SingleValueFunctionCall' as any,
+            Any = 'Any' as any,
+            CollectionNavigationNode = 'CollectionNavigationNode' as any,
+            SingleNavigationNode = 'SingleNavigationNode' as any,
+            SingleValueOpenPropertyAccess = 'SingleValueOpenPropertyAccess' as any,
+            SingleEntityCast = 'SingleEntityCast' as any,
+            All = 'All' as any,
+            EntityCollectionCast = 'EntityCollectionCast' as any,
+            EntityRangeVariableReference = 'EntityRangeVariableReference' as any,
+            SingleEntityFunctionCall = 'SingleEntityFunctionCall' as any,
+            CollectionFunctionCall = 'CollectionFunctionCall' as any,
+            EntityCollectionFunctionCall = 'EntityCollectionFunctionCall' as any,
+            NamedFunctionParameter = 'NamedFunctionParameter' as any
         }
 }

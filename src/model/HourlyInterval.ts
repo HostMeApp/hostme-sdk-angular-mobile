@@ -2,9 +2,7 @@
 import * as models from './models';
 
 export interface HourlyInterval {
-        "close"?: string;
-
-        "open"?: string;
-
+	close?: string;
+	open?: string;
 }
 

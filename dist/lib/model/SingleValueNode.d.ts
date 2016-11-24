@@ -1,7 +1,7 @@
 import * as models from './models';
 export interface SingleValueNode {
-    "typeReference"?: models.IEdmTypeReference;
-    "kind"?: SingleValueNode.KindEnum;
+    typeReference?: models.IEdmTypeReference;
+    kind?: SingleValueNode.KindEnum;
 }
 export declare namespace SingleValueNode {
     enum KindEnum {

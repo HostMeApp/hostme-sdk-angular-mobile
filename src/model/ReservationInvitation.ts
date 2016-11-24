@@ -2,9 +2,7 @@
 import * as models from './models';
 
 export interface ReservationInvitation {
-        "email"?: string;
-
-        "phoneNumber"?: string;
-
+	email?: string;
+	phoneNumber?: string;
 }
 

@@ -1,5 +1,5 @@
 export interface UserExternal {
-    "userName"?: string;
-    "hasRegistered"?: boolean;
-    "loginProvider"?: string;
+    userName?: string;
+    hasRegistered?: boolean;
+    loginProvider?: string;
 }

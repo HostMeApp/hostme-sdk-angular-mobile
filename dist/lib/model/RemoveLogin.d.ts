@@ -1,3 +1,3 @@
 export interface RemoveLogin {
-    "email": string;
+    email: string;
 }

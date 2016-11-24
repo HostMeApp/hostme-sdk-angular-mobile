@@ -2,7 +2,6 @@
 import * as models from './models';
 
 export interface RemoveLogin {
-        "email": string;
-
+	email: string;
 }
 

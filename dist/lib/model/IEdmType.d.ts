@@ -1,5 +1,5 @@
 export interface IEdmType {
-    "typeKind"?: IEdmType.TypeKindEnum;
+    typeKind?: IEdmType.TypeKindEnum;
 }
 export declare namespace IEdmType {
     enum TypeKindEnum {

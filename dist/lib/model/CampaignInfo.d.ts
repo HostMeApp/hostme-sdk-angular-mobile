@@ -1,4 +1,4 @@
 export interface CampaignInfo {
-    "restaurantId"?: number;
-    "tableNumber"?: string;
+    restaurantId?: number;
+    tableNumber?: string;
 }

@@ -2,9 +2,7 @@
 import * as models from './models';
 
 export interface SetPassword {
-        "newPassword": string;
-
-        "confirmPassword"?: string;
-
+	newPassword: string;
+	confirmPassword?: string;
 }
 
