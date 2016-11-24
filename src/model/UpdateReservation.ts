@@ -10,15 +10,17 @@ export interface UpdateReservation {
 
         "note"?: string;
 
-        "customerName"?: string;
+        "fullName"?: string;
 
-        "phone": string;
+        "phoneNumber": string;
 
         "highChair"?: boolean;
 
         "stroller"?: boolean;
 
         "party"?: boolean;
+
+        "partyTypes"?: Array<string>;
 
         "customerProfile"?: models.Profile;
 

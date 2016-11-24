@@ -167,6 +167,247 @@ import {IApiConfig} from '../client/IApiConfig';
             return this.$http(httpRequestParams);
         }
         /**
+         * 
+         * 
+         * @param value 
+         */
+        public guestAddNewReservation (value: models.CreateCustomerReservation, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReservationGuest> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations';
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'value' is not null or undefined
+            if (value === null || value === undefined) {
+                throw new Error('Required parameter value was null or undefined when calling guestAddNewReservation.');
+            }
+            let httpRequestParams: any = {
+                method: 'POST',
+                url: localVarPath,
+                json: true,
+                data: value,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param reservationId 
+         * @param cancelReservationContract 
+         */
+        public guestCloseAsCanceled (reservationId: string, cancelReservationContract: models.CancelReservation, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/{reservationId}/cancel'
+                .replace('{' + 'reservationId' + '}', String(reservationId));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling guestCloseAsCanceled.');
+            }
+            // verify required parameter 'cancelReservationContract' is not null or undefined
+            if (cancelReservationContract === null || cancelReservationContract === undefined) {
+                throw new Error('Required parameter cancelReservationContract was null or undefined when calling guestCloseAsCanceled.');
+            }
+            let httpRequestParams: any = {
+                method: 'PUT',
+                url: localVarPath,
+                json: true,
+                data: cancelReservationContract,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param code 
+         */
+        public guestGetInvitationAsync (code: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReservationInvitation> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/invitations/{code}'
+                .replace('{' + 'code' + '}', String(code));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'code' is not null or undefined
+            if (code === null || code === undefined) {
+                throw new Error('Required parameter code was null or undefined when calling guestGetInvitationAsync.');
+            }
+            let httpRequestParams: any = {
+                method: 'GET',
+                url: localVarPath,
+                json: true,
+                                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param reservationId 
+         */
+        public guestGetReservationById (reservationId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Reservation> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/{reservationId}'
+                .replace('{' + 'reservationId' + '}', String(reservationId));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling guestGetReservationById.');
+            }
+            let httpRequestParams: any = {
+                method: 'GET',
+                url: localVarPath,
+                json: true,
+                                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param reservationId 
+         * @param invitationContract 
+         */
+        public guestInvitePartyMembersAsync (reservationId: string, invitationContract: models.PartyMembersInvitation, extraHttpRequestParams?: any ) : ng.IHttpPromise<any> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/{reservationId}/invitations'
+                .replace('{' + 'reservationId' + '}', String(reservationId));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling guestInvitePartyMembersAsync.');
+            }
+            // verify required parameter 'invitationContract' is not null or undefined
+            if (invitationContract === null || invitationContract === undefined) {
+                throw new Error('Required parameter invitationContract was null or undefined when calling guestInvitePartyMembersAsync.');
+            }
+            let httpRequestParams: any = {
+                method: 'POST',
+                url: localVarPath,
+                json: true,
+                data: invitationContract,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param redeemInvitationContract 
+         * @param code 
+         */
+        public guestRedeemInvitationAsync (redeemInvitationContract: models.RedeemReservationInvitation, code: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/invitations/{code}'
+                .replace('{' + 'code' + '}', String(code));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'redeemInvitationContract' is not null or undefined
+            if (redeemInvitationContract === null || redeemInvitationContract === undefined) {
+                throw new Error('Required parameter redeemInvitationContract was null or undefined when calling guestRedeemInvitationAsync.');
+            }
+            // verify required parameter 'code' is not null or undefined
+            if (code === null || code === undefined) {
+                throw new Error('Required parameter code was null or undefined when calling guestRedeemInvitationAsync.');
+            }
+            let httpRequestParams: any = {
+                method: 'POST',
+                url: localVarPath,
+                json: true,
+                data: redeemInvitationContract,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
+         * 
+         * 
+         * @param reservationId 
+         * @param value 
+         */
+        public guestUpdateReservation (reservationId: string, value: models.UpdateReservation, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+            const localVarPath = this.config.basePath + '/api/rsv/mb/guest/reservations/{reservationId}'
+                .replace('{' + 'reservationId' + '}', String(reservationId));
+
+            let queryParameters: any = {};
+            let headerParams: any = this.extendObj({}, this.defaultHeaders);
+            // verify required parameter 'reservationId' is not null or undefined
+            if (reservationId === null || reservationId === undefined) {
+                throw new Error('Required parameter reservationId was null or undefined when calling guestUpdateReservation.');
+            }
+            // verify required parameter 'value' is not null or undefined
+            if (value === null || value === undefined) {
+                throw new Error('Required parameter value was null or undefined when calling guestUpdateReservation.');
+            }
+            let httpRequestParams: any = {
+                method: 'PUT',
+                url: localVarPath,
+                json: true,
+                data: value,
+                                params: queryParameters,
+                headers: headerParams
+            };
+
+            if (extraHttpRequestParams) {
+                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
+            }
+            
+            this.authentications.default.applyToRequest(httpRequestParams);
+
+            return this.$http(httpRequestParams);
+        }
+        /**
          * Mark all messages as read.
          * Mark all reservation messages as read.
          * @param reservationId Reservation identifier

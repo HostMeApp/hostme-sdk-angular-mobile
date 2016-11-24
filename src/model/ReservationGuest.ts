@@ -1,7 +1,9 @@
 'use strict';
 import * as models from './models';
 
-export interface Reservation {
+export interface ReservationGuest {
+        "token"?: string;
+
         "unreadMessageCount"?: number;
 
         "id"?: string;
@@ -42,7 +44,7 @@ export interface Reservation {
 
         "membership"?: models.MembershipInfo;
 
-        "type"?: Reservation.TypeEnum;
+        "type"?: ReservationGuest.TypeEnum;
 
         "party"?: boolean;
 
@@ -52,7 +54,7 @@ export interface Reservation {
 
 }
 
-export namespace Reservation {
+export namespace ReservationGuest {
         export enum TypeEnum {
             Standard = <any> 'Standard',
             Hybrid = <any> 'Hybrid'

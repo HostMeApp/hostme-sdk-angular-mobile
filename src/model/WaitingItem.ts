@@ -50,6 +50,8 @@ export interface WaitingItem {
 
         "messages"?: Array<models.Message>;
 
+        "partyTypes"?: Array<string>;
+
         "membership"?: models.MembershipInfo;
 
         "reservation"?: models.ReservationInfo;

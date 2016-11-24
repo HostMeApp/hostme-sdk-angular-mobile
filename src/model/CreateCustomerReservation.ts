@@ -24,6 +24,8 @@ export interface CreateCustomerReservation {
 
         "party"?: boolean;
 
+        "partyTypes"?: Array<string>;
+
         "email"?: string;
 
         "fullName"?: string;

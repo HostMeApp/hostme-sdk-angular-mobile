@@ -100,38 +100,6 @@ import {IApiConfig} from '../client/IApiConfig';
         /**
          * 
          * 
-         * @param checkinContract 
-         */
-        public checkIn (checkinContract: models.TransactionCheckin, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Transaction> {
-            const localVarPath = this.config.basePath + '/api/core/mb/restaurant/checkin';
-
-            let queryParameters: any = {};
-            let headerParams: any = this.extendObj({}, this.defaultHeaders);
-            // verify required parameter 'checkinContract' is not null or undefined
-            if (checkinContract === null || checkinContract === undefined) {
-                throw new Error('Required parameter checkinContract was null or undefined when calling checkIn.');
-            }
-            let httpRequestParams: any = {
-                method: 'PUT',
-                url: localVarPath,
-                json: true,
-                data: checkinContract,
-                                params: queryParameters,
-                headers: headerParams
-            };
-
-            if (extraHttpRequestParams) {
-                httpRequestParams = this.extendObj(httpRequestParams, extraHttpRequestParams);
-            }
-            
-                this.authentications.oauth2.applyToRequest(httpRequestParams);
-            this.authentications.default.applyToRequest(httpRequestParams);
-
-            return this.$http(httpRequestParams);
-        }
-        /**
-         * 
-         * 
          * @param lat 
          * @param lon 
          * @param name 
