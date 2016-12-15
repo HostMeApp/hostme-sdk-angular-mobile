@@ -1,5 +1,5 @@
 "use strict";
-var auth = require('./auth');
+var auth = require("./auth");
 'use strict';
 var MobileReservationsApi = (function () {
     function MobileReservationsApi($http, config, $httpParamSerializer) {
@@ -359,8 +359,8 @@ var MobileReservationsApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileReservationsApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileReservationsApi;
 }());
+MobileReservationsApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
 exports.MobileReservationsApi = MobileReservationsApi;
 //# sourceMappingURL=MobileReservationsApi.js.map

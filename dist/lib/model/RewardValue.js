@@ -1,11 +1,11 @@
 'use strict';
 var RewardValue;
 (function (RewardValue) {
+    var TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["Discount"] = 'Discount'] = "Discount";
         TypeEnum[TypeEnum["FreeMeal"] = 'FreeMeal'] = "FreeMeal";
         TypeEnum[TypeEnum["MoneyOff"] = 'MoneyOff'] = "MoneyOff";
-    })(RewardValue.TypeEnum || (RewardValue.TypeEnum = {}));
-    var TypeEnum = RewardValue.TypeEnum;
+    })(TypeEnum = RewardValue.TypeEnum || (RewardValue.TypeEnum = {}));
 })(RewardValue = exports.RewardValue || (exports.RewardValue = {}));
 //# sourceMappingURL=RewardValue.js.map

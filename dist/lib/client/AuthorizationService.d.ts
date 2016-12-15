@@ -1,3 +1,4 @@
+/// <reference types="angular" />
 import { IApiConfig } from './IApiConfig';
 export interface AccessTokenViewModel {
     access_token: string;

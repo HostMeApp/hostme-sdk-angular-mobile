@@ -1,5 +1,5 @@
 "use strict";
-var auth = require('./auth');
+var auth = require("./auth");
 'use strict';
 var MobileLoyaltyApi = (function () {
     function MobileLoyaltyApi($http, config, $httpParamSerializer) {
@@ -229,8 +229,8 @@ var MobileLoyaltyApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileLoyaltyApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileLoyaltyApi;
 }());
+MobileLoyaltyApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
 exports.MobileLoyaltyApi = MobileLoyaltyApi;
 //# sourceMappingURL=MobileLoyaltyApi.js.map

@@ -1,5 +1,5 @@
 "use strict";
-var auth = require('./auth');
+var auth = require("./auth");
 'use strict';
 var MobileWaitingManagementApi = (function () {
     function MobileWaitingManagementApi($http, config, $httpParamSerializer) {
@@ -263,8 +263,8 @@ var MobileWaitingManagementApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileWaitingManagementApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileWaitingManagementApi;
 }());
+MobileWaitingManagementApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
 exports.MobileWaitingManagementApi = MobileWaitingManagementApi;
 //# sourceMappingURL=MobileWaitingManagementApi.js.map

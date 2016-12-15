@@ -41,8 +41,8 @@ var AuthorizationService = (function () {
         return deffer.promise;
     };
     ;
-    AuthorizationService.$inject = ['$http', '$q', 'IApiConfig', '$httpParamSerializer'];
     return AuthorizationService;
 }());
+AuthorizationService.$inject = ['$http', '$q', 'IApiConfig', '$httpParamSerializer'];
 exports.AuthorizationService = AuthorizationService;
 //# sourceMappingURL=AuthorizationService.js.map

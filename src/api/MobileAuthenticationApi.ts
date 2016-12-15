@@ -27,7 +27,7 @@ import {IApiConfig} from '../client/IApiConfig';
         private extendObj<T1,T2>(objA: T1, objB: T2) {
             for(let key in objB) {
                 if(objB.hasOwnProperty(key)) {
-                    objA[key] = objB[key];
+                    objA[key as any] = objB[key];
                 }
             }
             return <T1&T2>objA;

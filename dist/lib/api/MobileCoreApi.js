@@ -1,5 +1,5 @@
 "use strict";
-var auth = require('./auth');
+var auth = require("./auth");
 'use strict';
 var MobileCoreApi = (function () {
     function MobileCoreApi($http, config, $httpParamSerializer) {
@@ -481,8 +481,8 @@ var MobileCoreApi = (function () {
         this.authentications.default.applyToRequest(httpRequestParams);
         return this.$http(httpRequestParams);
     };
-    MobileCoreApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
     return MobileCoreApi;
 }());
+MobileCoreApi.$inject = ['$http', 'IApiConfig', '$httpParamSerializer'];
 exports.MobileCoreApi = MobileCoreApi;
 //# sourceMappingURL=MobileCoreApi.js.map

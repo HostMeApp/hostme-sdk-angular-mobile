@@ -1,6 +1,6 @@
 {
   "name": "hostme-sdk-angular-mobile",
-  "version": "1.1.39",
+  "version": "1.1.40",
   "description": "HostMe angular SDK for mobile APIs",
   "main": "./dist/lib/umd.js",
   "typings": "./dist/lib/index.d.ts",
@@ -10,7 +10,6 @@
     "url": "https://github.com/HostMeApp/hostme-sdk-angular-mobile.git"
   },
   "scripts": {
-    "postinstall": "typings install",
     "clean": "rimraf ./dist",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts",
     "tsc": "tsc",
@@ -21,9 +20,11 @@
     "version": "sync-version bower.json typings.json && npm run all && git add .",
     "postversion": "git push && git push --tags"
   },
-  "author": "HostMe",
+  "author": "Hostme",
   "license": "MIT",
   "dependencies": {
+	"@types/jquery": "2.0.34",
+	"@types/angular": "1.5.21",
     "angular": "^1.5.3",
     "jquery": "^2.2.3"
   },
@@ -32,8 +33,7 @@
     "browserify-umdify": "^1.0.3",
     "del": "^2.2.0",
     "tslint": "^3.8.1",
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1",
+    "typescript": "2.1.4",
     "rimraf": "^2.5.2",
     "semver-sync": "^1.2.2",
     "mkdirp": "^0.5.1",

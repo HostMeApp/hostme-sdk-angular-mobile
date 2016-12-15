@@ -1,6 +1,7 @@
 'use strict';
 var SingleValueNode;
 (function (SingleValueNode) {
+    var KindEnum;
     (function (KindEnum) {
         KindEnum[KindEnum["None"] = 'None'] = "None";
         KindEnum[KindEnum["Constant"] = 'Constant'] = "Constant";
@@ -23,7 +24,6 @@ var SingleValueNode;
         KindEnum[KindEnum["CollectionFunctionCall"] = 'CollectionFunctionCall'] = "CollectionFunctionCall";
         KindEnum[KindEnum["EntityCollectionFunctionCall"] = 'EntityCollectionFunctionCall'] = "EntityCollectionFunctionCall";
         KindEnum[KindEnum["NamedFunctionParameter"] = 'NamedFunctionParameter'] = "NamedFunctionParameter";
-    })(SingleValueNode.KindEnum || (SingleValueNode.KindEnum = {}));
-    var KindEnum = SingleValueNode.KindEnum;
+    })(KindEnum = SingleValueNode.KindEnum || (SingleValueNode.KindEnum = {}));
 })(SingleValueNode = exports.SingleValueNode || (exports.SingleValueNode = {}));
 //# sourceMappingURL=SingleValueNode.js.map

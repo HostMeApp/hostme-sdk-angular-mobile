@@ -1,6 +1,7 @@
 'use strict';
 var IEdmType;
 (function (IEdmType) {
+    var TypeKindEnum;
     (function (TypeKindEnum) {
         TypeKindEnum[TypeKindEnum["None"] = 'None'] = "None";
         TypeKindEnum[TypeKindEnum["Primitive"] = 'Primitive'] = "Primitive";
@@ -10,7 +11,6 @@ var IEdmType;
         TypeKindEnum[TypeKindEnum["Collection"] = 'Collection'] = "Collection";
         TypeKindEnum[TypeKindEnum["EntityReference"] = 'EntityReference'] = "EntityReference";
         TypeKindEnum[TypeKindEnum["Enum"] = 'Enum'] = "Enum";
-    })(IEdmType.TypeKindEnum || (IEdmType.TypeKindEnum = {}));
-    var TypeKindEnum = IEdmType.TypeKindEnum;
+    })(TypeKindEnum = IEdmType.TypeKindEnum || (IEdmType.TypeKindEnum = {}));
 })(IEdmType = exports.IEdmType || (exports.IEdmType = {}));
 //# sourceMappingURL=IEdmType.js.map

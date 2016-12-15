@@ -1,3 +1,4 @@
+/// <reference types="angular" />
 import * as models from '../model/models';
 import * as auth from './auth';
 import { IApiConfig } from '../client/IApiConfig';
