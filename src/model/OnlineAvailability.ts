@@ -7,6 +7,7 @@ export interface OnlineAvailability {
 	open?: boolean;
 	requestedTime?: boolean;
 	time?: string;
+	amount?: number;
 }
 
 export namespace OnlineAvailability {
